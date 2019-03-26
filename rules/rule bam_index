@@ -1,0 +1,6 @@
+rule bam_index:
+    input: 
+        "SoCHR22_hg19.bam"
+    output: 
+        "SoCHR22_hg19.bam.bai"
+    shell: "~/samtools-1.9/samtools index {input}"
