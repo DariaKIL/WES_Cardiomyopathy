@@ -1,0 +1,6 @@
+rule ref_index:
+    input: 
+        "ref"
+    output: 
+        "ref.fai"
+    shell: "~/samtools-1.9/samtools faidx {input}"
