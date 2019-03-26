@@ -1,0 +1,7 @@
+rule HC:
+    input:
+	    "bam_file"
+	    "ref"
+    output:
+	    "SoCHR22_hg19.vcf"
+    shell: "~/Documents/Project2/gatk-4.1.0.0/gatk -T HaplotypeCaller -I bam_file -R ref -o ./output/SoCHR22_hg19.vcf"
