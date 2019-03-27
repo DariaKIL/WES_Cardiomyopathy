@@ -1,12 +1,10 @@
 bam_file: SoCHR22_hg19.bam
-bam_file: "~/snakemake/input/SoCHR22_hg19.bam"
+bam_file: "~/Documents/Project2/SoCHR22_hg19.bam"
 
 ref: chr22.fa
-ref: "~/snakemake/output/chr22.fa"
+ref: "~/Documents/Project2/chr22.fa"
 
 filtering:
-  vqsr: false
-  hard:
     snvs:
       "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0"
     indels:
