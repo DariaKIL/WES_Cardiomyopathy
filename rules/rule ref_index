@@ -1,6 +1,8 @@
+configfile: "config.yaml"
+
 rule ref_index:
     input: 
-        "ref"
+        ref = config["genome"]
     output: 
-        "ref.fai"
-    shell: "~/samtools-1.9/samtools faidx {input}"
+        ref_fai = "home/daria/Project2/GRCh37.primary_assembly.genome.fa.fai"
+    shell: "samtools faidx {input}"
