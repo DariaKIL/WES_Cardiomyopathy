@@ -1,8 +1,8 @@
-bam_file: SoCHR22_hg19.bam
-bam_file: "~/Documents/Project2/SoCHR22_hg19.bam"
+ref:
+  genome: "/home/daria/Documents/Project2/chr22.fa"
 
-ref: chr22.fa
-ref: "~/Documents/Project2/chr22.fa"
+path to bam_file:
+  bam_file: "/home/daria/Documents/Project2/SoCHR22_hg19.bam"
 
 filtering:
     snvs:
@@ -12,4 +12,4 @@ filtering:
 
 
 gatk:
-    HaplotypeCaller: ""
+    HaplotypeCaller: "/home/daria/Documents/Project2/gatk-4.1.0.0"
