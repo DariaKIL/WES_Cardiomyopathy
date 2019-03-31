@@ -1,7 +1,9 @@
+configfile: "config.yaml"
+
 rule filter_indel:
     input:
-	    "raw_indels.vcf"
-	    "ref"
+	    raw_indels = "home/daria/Documents/Project2/raw_indels.vcf"
+	    ref = config["genome"]
     output:
-	    "filtered_indels.vcf"
-    shell: "~/Documents/Project2/gatk-4.1.0.0/gatk -T VariantFiltration -R ref -V raw_indels.vcf --filterExpression QD < 2.0 || FS > 200.0 || ReadPosRankSum < -20.0 --filterName my_indel_filter -o filtered_indels.vcf"
+	    filt_indels = "home/daria/filtered_indels.vcf"
+    shell: "gatk -T VariantFiltration -R {input.ref} -V {input.raw_indels} --filterExpression QD < 2.0 || FS > 200.0 || ReadPosRankSum < -20.0 --filterName my_indel_filter -o {output}"
