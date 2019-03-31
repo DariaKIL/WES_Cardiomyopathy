@@ -1,7 +1,9 @@
+configfile: "config.yaml"
+
 rule select_indel:
     input:
-	    "SoCHR22_hg19.vcf" 
-	    "ref"
+	    vcf_file = "home/daria/Documents/Project2/SoCHR22_hg19.vcf" 
+	    ref = config["genome"]
     output:
-	    "raw_indels.vcf"
-    shell: "~/Documents/Project2/gatk-4.1.0.0/gatk -T SelectVariants -R ref -V SoCHR22_hg19.vcf -selectType INDEL -o raw_indels.vcf"
+	    raw_indels = "home/daria/Documents/Project2/SoCHR22_hg19_indels.vcf"
+    shell: "gatk -T SelectVariants -R {imput.ref} -V {imput.vcf_file} -selectType INDEL -o {output}"
