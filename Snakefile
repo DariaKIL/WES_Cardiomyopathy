@@ -9,10 +9,10 @@ rule all:
 
 ##### Modules #####
 
-include: "rules/rule bam_index.smk"
-include: "rules/rule ref_index.smk"
-include: "rules/rule HC.smk"
-include: "rules/rule select_snp.smk"
-include: "rules/rule snp_filter.smk"
-include: "rules/rule filter_indel.smk"
-include: "rules/rule select_indel.smk"
+include: "rules/rule_bam_index.smk"
+include: "rules/rule_ref_index.smk"
+include: "rules/rule_HC.smk"
+include: "rules/rule_select_snp.smk"
+include: "rules/rule_snp_filter.smk"
+include: "rules/rule_filter_indel.smk"
+include: "rules/rule_select_indel.smk"
