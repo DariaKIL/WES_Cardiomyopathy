@@ -8,4 +8,4 @@ rule select_indel:
 	    raw_indels = "home/daria/Documents/Project2/SoCHR22_hg19_indels.vcf",
 	threads:
         14
-    shell: "gatk -T SelectVariants -R {imput.ref} -V {imput.vcf_file} -selectType INDEL -o {output}"
+    shell: "gatk SelectVariants -R {imput.ref} -V {imput.vcf_file} -selectType INDEL -O {output}"
