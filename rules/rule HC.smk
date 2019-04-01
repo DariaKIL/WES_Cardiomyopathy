@@ -1,6 +1,6 @@
 configfile: "config.yaml"
 
-rule HC:
+rule_HC:
     input:
 	    bam_file = config["bam_file"]
 	    ref = config["genome"]
