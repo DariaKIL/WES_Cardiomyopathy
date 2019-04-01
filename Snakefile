@@ -1,6 +1,14 @@
 include: "rules/common.smk"
 configfile: "config.yaml"
 
+#import python library
+import os
+
+#path to dir
+work_dir = os.getcwd() + '/'
+bam_file = work_dir + "bam_file"
+ref = work_dir + "genome"
+
 rule all:
     input:
         "/home/daria/Documents/Project2/SoCHR22_hg19.bam"
