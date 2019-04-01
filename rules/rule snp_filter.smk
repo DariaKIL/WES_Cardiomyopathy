@@ -1,7 +1,9 @@
+configfile: "config.yaml"
+
 rule snp_filter:
     input:
-	    "raw_snps.vcf" 
-	    "ref"
+	    raw_snps = "home/daria/Documents/Project2/SoCHR22_hg19_snps.vcf" 
+	    ref = config["genome"]
     output:
-	    "filtered_snps.vcf" 
-    shell: "~/Documents/Project2/gatk-4.1.0.0/gatk -T VariantFiltration -R ref -V raw_snps.vcf --filterExpression QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0 --filterName my_snp_filter -o filtered_snps.vcf "
+	    filt_snps = "home/daria/filtered_snps.vcf"
+    shell: "gatk -T VariantFiltration -R {input.ref} -V {input.raw_snps} --filterExpression QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0 --filterName my_snp_filter -o {output}"
