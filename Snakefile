@@ -3,8 +3,8 @@ configfile: "config.yaml"
 
 rule all:
     input:
-        "/home/daria/Documents/Project2/SoCHR22_hg19.bam"
-        "/home/daria/Documents/Project2/GRCh37.primary_assembly.genome.fa"
+        expand("/home/daria/Documents/Project2/SoCHR22_hg19.bam")
+        expand("/home/daria/Documents/Project2/GRCh37.primary_assembly.genome.fa")
 
 
 ##### Modules #####
