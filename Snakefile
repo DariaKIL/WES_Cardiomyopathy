@@ -1,13 +1,9 @@
-include: "rules/common.smk"
 configfile: "config.yaml"
 
-#import python library
+
 import os
 
-#path to dir
 work_dir = os.getcwd() + '/'
-bam_file = work_dir + "bam_file"
-ref = work_dir + "genome"
 
 rule all:
     input:
@@ -17,10 +13,14 @@ rule all:
 
 ##### Modules #####
 
-include: "rules/rule_bam_index.smk"
-include: "rules/rule_ref_index.smk"
-include: "rules/rule_HC.smk"
-include: "rules/rule_select_snp.smk"
-include: "rules/rule_snp_filter.smk"
-include: "rules/rule_filter_indel.smk"
-include: "rules/rule_select_indel.smk"
+include: work_dir + "rules/rule_bam_index.smk"
+include: work_dir + "rules/rule_ref_index.smk"
+include: work_dir + "rules/rule_HC.smk"
+include: work_dir + "rules/rule_select_snp.smk"
+include: work_dir + "rules/rule_snp_filter.smk"
+include: work_dir + "rules/rule_filter_indel.smk"
+include: work_dir + "rules/rule_select_indel.smk"
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                        
