@@ -1,8 +1,7 @@
 ref:
   genome: "/home/daria/Documents/Project2/GRCh37.primary_assembly.genome.fa"
 
-path to bam_file:
-  bam_file: "/home/daria/Documents/Project2/SoCHR22_hg19.bam"
+bam_file: "/home/daria/Documents/Project2/SoCHR22_hg19.bam"
 
 filtering:
     snps:
