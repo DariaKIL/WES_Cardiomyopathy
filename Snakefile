@@ -3,7 +3,7 @@ configfile: "config.yaml"
 
 rule all:
     input:
-        "/Project2/SoCHR22_hg19.bam"
+        "/Project2/SoCHR22_hg19.bam",
         "/Project2/GRCh37.primary_assembly.genome.fa"
 
 
