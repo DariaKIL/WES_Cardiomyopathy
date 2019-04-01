@@ -6,4 +6,4 @@ rule HC:
 	    ref = config["genome"]
     output:
 	    HC = "home/daria/Documents/Project2/SoCHR22_hg19.vcf"
-    shell: "gatk -T HaplotypeCaller -I {input.bam_file} -R {input.ref} -o {output.HC}"
+    shell: "gatk HaplotypeCaller -I {input.bam_file} -R {input.ref} -O {output.HC}"
