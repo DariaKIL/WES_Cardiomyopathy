@@ -4,7 +4,7 @@ rule ref_index:
     input: 
         ref = config["genome"],
     output: 
-        ref_fai = "home/daria/Project2/GRCh37.primary_assembly.genome.fa.fai",
+        ref_fai = "home/daria/Project2/hs37d5.fa.fai",
     threads:
-        14
+        4
     shell: "samtools faidx {input}"
