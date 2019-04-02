@@ -7,5 +7,5 @@ rule HC:
     output:
 	    vcf = "home/daria/Documents/Project2/SoCHR22_hg19.vcf",
 	 threads:
-        14
+        4
     shell: "gatk HaplotypeCaller -I {input.bam_file} -R {input.ref} -O {output.vcf}"
