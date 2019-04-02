@@ -6,5 +6,5 @@ rule bam_index:
     output: 
         bai_fail = "home/daria/Documents/Project2/SoCHR22_hg19.bam.bai",
     threads:
-        14
+        4
     shell: "samtools index {input.bam_file}"
