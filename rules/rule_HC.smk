@@ -8,4 +8,4 @@ rule HC:
 	    vcf = "home/daria/Documents/Project2/SoCHR22_hg19.vcf",
 	 threads:
         4
-    shell: "gatk HaplotypeCaller -I {input.bam_file} -R {input.ref} -O {output.vcf}"
+    shell: "/gatk HaplotypeCaller -I {input.bam_file} -R {input.ref} -O {output.vcf}"
