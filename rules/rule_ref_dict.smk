@@ -2,9 +2,9 @@ configfile: "config.yaml"
 
 rule ref_dict:
     input: 
-        ref = config["genome"],
+        ref = config["ref"],
     output: 
-        ref_dict = "home/daria/Project2/GRCh37.primary_assembly.genome.dict",
+        ref_dict = "home/daria/Project2/hs37d5.dict",
     threads:
-        14
+        4
     shell: "gatk CreateSequenceDictionary -R {input} -O {output}"

@@ -2,10 +2,10 @@ configfile: "config.yaml"
 
 rule HC:
     input:
-	    bam_file = config["bam_file"],
-	    ref = config["ref"],
+	bam_file = config["bam_file"],
+	ref = config["ref"],
     output:
-	    vcf = "home/daria/Documents/Project2/SoCHR22_hg19.vcf",
-	 threads:
+	vcf = "home/daria/Documents/Project2/SoCHR22_hg19.vcf",
+    threads:
         4
-    shell: "/gatk HaplotypeCaller -I {input.bam_file} -R {input.ref} -O {output.vcf}"
+    shell: "gatk HaplotypeCaller -I {input.bam_file} -R {input.ref} -O {output}"

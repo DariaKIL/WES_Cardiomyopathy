@@ -1,0 +1,26 @@
+Building DAG of jobs...
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	ref_dict
+	2
+
+rule ref_dict:
+    input: /home/daria/Documents/Project2/hs37d5.fa
+    output: home/daria/Project2/hs37d5.dict
+    jobid: 1
+
+Error in rule ref_dict:
+    jobid: 1
+    output: home/daria/Project2/hs37d5.dict
+
+RuleException:
+NameError in line 10 of /home/daria/snakemake/project-ib/rules/rule_ref_dict.smk:
+The name 'gatk' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}
+  File "/home/daria/snakemake/project-ib/rules/rule_ref_dict.smk", line 10, in __rule_ref_dict
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Will exit after finishing currently running jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2019-04-02T180459.237329.snakemake.log
