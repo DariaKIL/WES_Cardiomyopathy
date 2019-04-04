@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 3 of /home/daria/snakemake/project-ib/rules/rule_ref_index.smk:
+Missing input files for rule ref_index:
+genome
