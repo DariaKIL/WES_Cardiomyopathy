@@ -3,7 +3,7 @@ configfile: "config.yaml"
 rule HC:
     input:
 	bam_file = config["bam_file"],
-	ref = config["ref"],
+	ref = config["ref"]["genome"],
     output:
 	vcf = "home/daria/Documents/Project2/SoCHR22_hg19.vcf",
     threads:

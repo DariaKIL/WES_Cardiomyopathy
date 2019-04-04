@@ -1,8 +1,8 @@
 configfile: "config.yaml"
 
-import os
+#import os
 
-work_dir = os.getcwd() + '/'
+#work_dir = os.getcwd() + '/'
 
 
 rule all:

@@ -2,7 +2,7 @@ configfile: "config.yaml"
 
 rule ref_dict:
     input: 
-        ref = config["ref"],
+        ref = config["ref"]["genome"],
     output: 
         ref_dict = "home/daria/Project2/hs37d5.dict",
     threads:
