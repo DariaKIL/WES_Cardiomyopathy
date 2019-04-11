@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 8 of /home/daria/snakemake/project-ib/Snakefile:
+Missing input files for rule all:
+/home/daria/Documents/Project2/hs37d5.fa.fai

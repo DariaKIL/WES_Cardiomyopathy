@@ -7,4 +7,4 @@ rule ref_dict:
         ref_dict = "home/daria/Project2/hs37d5.dict",
     threads:
         4
-    shell: "gatk CreateSequenceDictionary -R {input} -O {output}"
+    shell: "gatk CreateSequenceDictionary -R {input.ref} -O {output.ref_dict}"
