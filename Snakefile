@@ -4,13 +4,12 @@ import os
 
 work_dir = os.getcwd() + '/'
 
-
 rule all:
     input:
         expand("home/daria/Documents/Project2/SoCHR22_hg19.bam.bai"),
         expand("home/daria/Document/Project2/hs37d5.fa.fai"),
         expand("home/daria/Documents/Project2/hs37d5.dict"),
-	expand("home/daria/Documents/Project2/SoCHR22_hg19.vcf"),
+        expand("home/daria/Documents/Project2/SoCHR22_hg19.vcf"),
         expand("home/daria/Documents/Project2/SoCHR22_hg19_snps.vcf" ),
         expand("home/daria/Documents/Project2/SoCHR22_hg19_indels.vcf"),
 
