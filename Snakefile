@@ -2,7 +2,7 @@ configfile: 'config.yaml'
 
 import os, sys
 #Go to the working directory
-os.chdir('/home/daria/Documents/Project2/')
+os.chdir('/home/daria/Documents/Project2')
 print('Current working dir : %s' % os.getcwd())
 work_dir = os.getcwd()
 
@@ -19,12 +19,10 @@ reference_dict = reference_path + reference_name + '.dict'
 samples, = glob_wildcards(config["bam_file"]+"{sample}.bam")
 print('BAM files:' + str(samples))
 
-#bam_index_file = [f + '.bam.bai' for f in samples if f[0] != '.']
-
 rule all:
     input:
-        #expand("/input/{sample}.bam", sample=samples),
-        expand("/input/{sample}.bam.bai", sample=samples),
+        expand('input/{sample}.bam', sample=samples),
+        expand('input/{sample}.bam.bai', sample=samples),
 #        "home/daria/Documents/Progect2/hs37d5.fa.fai",
 #        "home/daria/Documents/Project2/hs37d5.dict",
 #        expand("home/daria/Documents/Project2/{sample}.vcf"),

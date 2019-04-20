@@ -1,0 +1,9 @@
+Building DAG of jobs...
+Relative file path './input/SoCHR22_hg19.bam' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './input/SoCHR22_hg19_1.bam' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './input/SoCHR22_hg19.bam.bai' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './input/SoCHR22_hg19_1.bam.bai' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+MissingInputException in line 24 of /home/daria/snakemake/project-ib/Snakefile:
+Missing input files for rule all:
+./input/SoCHR22_hg19.bam.bai
+./input/SoCHR22_hg19_1.bam.bai
