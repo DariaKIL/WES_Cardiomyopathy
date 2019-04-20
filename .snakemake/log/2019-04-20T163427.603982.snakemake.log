@@ -1,0 +1,4 @@
+AttributeError in line 1 of /home/daria/snakemake/project-ib/rules/1_bam_index.smk:
+'dict' object has no attribute 'yaml'
+  File "/home/daria/snakemake/project-ib/Snakefile", line 35, in <module>
+  File "/home/daria/snakemake/project-ib/rules/1_bam_index.smk", line 1, in <module>
