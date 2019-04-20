@@ -7,4 +7,4 @@ rule bam_index:
         bai_file = "home/daria/Documents/Project2/SoCHR22_hg19.bam.bai",
     threads:
         4
-    shell: "samtools index {input.bam_file}"
+    shell: "samtools index {input.bam_file} -o {output}" 

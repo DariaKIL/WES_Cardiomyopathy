@@ -1,0 +1,18 @@
+Building DAG of jobs...
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	bam_index
+	2
+
+rule bam_index:
+    input: /home/daria/Documents/Project2/SoCHR22_hg19.bam
+    output: home/daria/Documents/Project2/SoCHR22_hg19.bam.bai
+    jobid: 1
+
+Waiting at most 5 seconds for missing files.
+Will exit after finishing currently running jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2019-04-12T152924.017473.snakemake.log

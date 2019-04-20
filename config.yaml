@@ -1,3 +1,14 @@
+# Variables
+#BASE_PATH = '/home/daria/Documents/'
+#REFERENCE_BASE_PATH = BASE_PATH + 'Project/'
+#REFERENCE_NAME = 'hs37d5'
+#REFERENCE_FILE_EXTENSION = 'fa'
+#REFERENCE = '{}{}.{}'.format(REFERENCE_BASE_PATH, REFERENCE_NAME, REFERENCE_FILE_EXTENSION)
+
+#REFERENCE_INDEX = REFERENCE + '.fai'
+#REFERENCE_DICT = REFERENCE_BASE_PATH + REFERENCE_NAME + '.dict'
+
+
 ref:
   genome: "/home/daria/Documents/Project2/hs37d5.fa"
 

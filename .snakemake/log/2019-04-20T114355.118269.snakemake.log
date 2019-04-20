@@ -1,0 +1,3 @@
+SyntaxError in line 10 of /home/daria/snakemake/project-ib/rules/1_bam_index.smk:
+invalid syntax
+  File "/home/daria/snakemake/project-ib/Snakefile", line 18, in <module>
