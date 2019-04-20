@@ -12,7 +12,7 @@
 ref:
   genome: "/home/daria/Documents/Project2/hs37d5.fa"
 
-bam_file: "/home/daria/Documents/Project2/SoCHR22_hg19.bam"
+bam_file: "/home/daria/Documents/Project2/"
 
 snps: "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0"
 

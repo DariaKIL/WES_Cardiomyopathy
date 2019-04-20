@@ -4,14 +4,17 @@ import os
 
 work_dir = os.getcwd() + '/'
 
+#for samples
+samples, = glob_wildcards(config["bam_file"]+"/{sample}.bam")
+
 rule all:
     input:
-        "home/daria/Documents/Project2/SoCHR22_hg19.bam.bai",
-        "hs37d5.fa.fai",
-        "home/daria/Documents/Project2/s37d5.dict",
-        "home/daria/Documents/Project2/SoCHR22_hg19.vcf",
-        "home/daria/Documents/Project2/SoCHR22_hg19_snps.vcf",
-        "home/daria/Documents/Project2/SoCHR22_hg19_indels.vcf"
+        expand("home/daria/Documents/Project2/{sample}.bam.bai"),
+        "home/daria/Documents/Progect2/hs37d5.fa.fai",
+        "home/daria/Documents/Project2/hs37d5.dict",
+        expand("home/daria/Documents/Project2/{sample}.vcf"),
+        expand("home/daria/Documents/Project2/{sample}_snps.vcf"),
+        expand("home/daria/Documents/Project2/{sample}_indels.vcf")
 
 ##### Modules #####
 
