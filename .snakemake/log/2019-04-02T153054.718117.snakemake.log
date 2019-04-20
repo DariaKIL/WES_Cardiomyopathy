@@ -1,4 +1,0 @@
-KeyError in line 5 of /home/daria/snakemake/project-ib/rules/rule_ref_dict.smk:
-'genome'
-  File "/home/daria/snakemake/project-ib/Snakefile", line 22, in <module>
-  File "/home/daria/snakemake/project-ib/rules/rule_ref_dict.smk", line 5, in <module>

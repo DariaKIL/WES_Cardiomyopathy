@@ -1,3 +1,0 @@
-NameError in line 8 of /home/daria/snakemake/project-ib/Snakefile:
-name 'bam_file' is not defined
-  File "/home/daria/snakemake/project-ib/Snakefile", line 8, in <module>

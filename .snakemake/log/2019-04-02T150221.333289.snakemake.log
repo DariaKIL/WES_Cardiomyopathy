@@ -1,4 +1,0 @@
-Building DAG of jobs...
-MissingInputException in line 8 of /home/daria/snakemake/project-ib/Snakefile:
-Missing input files for rule all:
-home/daria/Project2/GRCh37.primary_assembly.genome.fa.fai

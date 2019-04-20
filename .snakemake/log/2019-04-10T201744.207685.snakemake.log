@@ -1,3 +1,0 @@
-SyntaxError in line 5 of /home/daria/snakemake/project-ib/rules/rule_HC.smk:
-Unexpected keyword bam_file in rule definition (rule_HC.smk, line 5)
-  File "/home/daria/snakemake/project-ib/Snakefile", line 23, in <module>

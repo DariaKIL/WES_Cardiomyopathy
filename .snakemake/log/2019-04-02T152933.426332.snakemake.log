@@ -1,3 +1,0 @@
-WorkflowError in line 22 of /home/daria/snakemake/project-ib/Snakefile:
-Failed to open /home/daria/snakemake/project-ib/rules/rule_ref_dic.smk.
-  File "/home/daria/snakemake/project-ib/Snakefile", line 22, in <module>

@@ -1,3 +1,0 @@
-NameError in line 14 of /home/daria/snakemake/project-ib/Snakefile:
-name 'reference' is not defined
-  File "/home/daria/snakemake/project-ib/Snakefile", line 14, in <module>

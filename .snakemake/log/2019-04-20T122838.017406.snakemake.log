@@ -1,4 +1,0 @@
-KeyError in line 6 of /home/daria/snakemake/project-ib/rules/6_snp_filter.smk:
-'genome'
-  File "/home/daria/snakemake/project-ib/Snakefile", line 23, in <module>
-  File "/home/daria/snakemake/project-ib/rules/6_snp_filter.smk", line 6, in <module>
