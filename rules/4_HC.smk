@@ -4,5 +4,6 @@ rule HC:
     input: work_dir + '/input/{sample}.bam',
     output: work_dir + '/input/{sample}.vcf',
     params: ref
+    priority: 2
     threads: 4
     shell: 'gatk HaplotypeCaller -I {input} -R {params} -O {output}'
