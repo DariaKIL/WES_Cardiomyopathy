@@ -15,17 +15,17 @@ ref = '{}{}.{}'.format(reference_path, reference_name, reference_file_extension)
 reference_index = reference_path + reference_name + '.fai'
 reference_dict = reference_path + reference_name + '.dict'
 
-#for samples
+#For samples
 samples, = glob_wildcards(work_dir + "/input/{sample}.bam")
 print('BAM files:' + str(samples))
 
 rule all:
     input:
-        #expand(work_dir + '/input/{sample}.bam.bai', sample=samples),
-        #reference_index,
-        #reference_dict,
-        #expand(work_dir + '/input/{sample}.vcf', sample=samples),
-        #expand(work_dir + '/input/{sample}_select.vcf', sample=samples),
+        expand(work_dir + '/input/{sample}.bam.bai', sample=samples),
+        reference_index,
+        reference_dict,
+        expand(work_dir + '/input/{sample}.vcf', sample=samples),
+        expand(work_dir + '/input/{sample}_select.vcf', sample=samples),
         expand(work_dir + '/input/{sample}_snps.vcf', sample=samples)
 
 ##### Modules #####
@@ -36,4 +36,4 @@ include:'/home/daria/snakemake/project-ib/rules/3_ref_dict.smk'
 include:'/home/daria/snakemake/project-ib/rules/4_HC.smk'
 include:'/home/daria/snakemake/project-ib/rules/5_select_var.smk'
 include:'/home/daria/snakemake/project-ib/rules/6_snp_filter.smk'
-#include:'/home/daria/snakemake/project-ib/rules/7_filter_indel.smk'                                                                            
+include:'/home/daria/snakemake/project-ib/rules/7_filter_indel.smk'                                                                            
