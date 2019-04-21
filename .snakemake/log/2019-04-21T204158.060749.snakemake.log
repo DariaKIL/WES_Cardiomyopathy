@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	2	snp_filter
+	3
+
+rule snp_filter:
+    input: /home/daria/Documents/Project2/input/SoCHR22_hg19_select.vcf
+    output: /home/daria/Documents/Project2/input/SoCHR22_hg19_snps.vcf
+    jobid: 1
+    wildcards: sample=SoCHR22_hg19
+
+Error in rule snp_filter:
+    jobid: 1
+    output: /home/daria/Documents/Project2/input/SoCHR22_hg19_snps.vcf
+
+RuleException:
+CalledProcessError in line 12 of /home/daria/snakemake/project-ib/rules/6_snp_filter.smk:
+Command ' set -euo pipefail;  gatk VariantFiltration -R ref -V /home/daria/Documents/Project2/input/SoCHR22_hg19_select.vcf -O /home/daria/Documents/Project2/input/SoCHR22_hg19_snps.vcf --filter-name "snp_filter" --filter-expression "AS_QD < 2.0 && AS_FS > 60.0 && AS_MQ < 40.0 && AS_MQRankSum < -12.5 && AS_ReadPosRankSum < -8.0" ' returned non-zero exit status 2.
+  File "/home/daria/snakemake/project-ib/rules/6_snp_filter.smk", line 12, in __rule_snp_filter
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Will exit after finishing currently running jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/daria/snakemake/project-ib/.snakemake/log/2019-04-21T204158.060749.snakemake.log

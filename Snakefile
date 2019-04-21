@@ -26,7 +26,9 @@ rule all:
         reference_dict,
         expand(work_dir + '/input/{sample}.vcf', sample=samples),
         expand(work_dir + '/input/{sample}_select.vcf', sample=samples),
-        expand(work_dir + '/input/{sample}_snps.vcf', sample=samples)
+        expand(work_dir + '/input/{sample}_snps.vcf', sample=samples),
+        expand(work_dir + '/input/{sample}_indels.vcf', sample=samples)
+
 
 ##### Modules #####
 
