@@ -1,3 +1,0 @@
-SyntaxError in line 4 of /home/daria/snakemake/project-ib/rules/5_select_var.smk:
-EOL while scanning string literal
-  File "/home/daria/snakemake/project-ib/Snakefile", line 37, in <module>
