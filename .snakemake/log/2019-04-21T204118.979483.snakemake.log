@@ -1,3 +1,0 @@
-SyntaxError in line 12 of /home/daria/snakemake/project-ib/rules/6_snp_filter.smk:
-Unexpected keyword shall in rule definition (6_snp_filter.smk, line 12)
-  File "/home/daria/snakemake/project-ib/Snakefile", line 40, in <module>

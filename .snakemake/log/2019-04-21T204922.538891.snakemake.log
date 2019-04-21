@@ -1,3 +1,0 @@
-FileNotFoundError in line 5 of /home/daria/snakemake/project-ib/Snakefile:
-[Errno 2] No such file or directory: 'home/daria/Documents/Project2'
-  File "/home/daria/snakemake/project-ib/Snakefile", line 5, in <module>

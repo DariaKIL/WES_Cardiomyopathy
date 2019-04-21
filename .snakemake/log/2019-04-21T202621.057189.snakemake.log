@@ -1,3 +1,0 @@
-SyntaxError in line 18 of /home/daria/snakemake/project-ib/rules/6_snp_filter.smk:
-invalid syntax
-  File "/home/daria/snakemake/project-ib/Snakefile", line 38, in <module>
