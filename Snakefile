@@ -8,7 +8,7 @@ work_dir = os.getcwd()
 
 #Reference
 reference_path = work_dir + '/reference'
-reference_name = 'hs37d5'
+reference_name = '/hs37d5'
 reference_file_extension = 'fa'
 ref = '{}{}.{}'.format(reference_path, reference_name, reference_file_extension)
 
@@ -16,26 +16,24 @@ reference_index = reference_path + reference_name + '.fai'
 reference_dict = reference_path + reference_name + '.dict'
 
 #for samples
-samples, = glob_wildcards(config["bam_file"]+"{sample}.bam")
+samples, = glob_wildcards(work_dir + "/input/{sample}.bam")
 print('BAM files:' + str(samples))
 
 rule all:
     input:
-        expand('input/{sample}.bam', sample=samples),
-        expand('input/{sample}.bam.bai', sample=samples),
-#        "home/daria/Documents/Progect2/hs37d5.fa.fai",
-#        "home/daria/Documents/Project2/hs37d5.dict",
-#        expand("home/daria/Documents/Project2/{sample}.vcf"),
-#        expand("home/daria/Documents/Project2/{sample}_snps.vcf"),
-#        expand("home/daria/Documents/Project2/{sample}_indels.vcf")
+        #expand(work_dir + '/input/{sample}.bam.bai', sample=samples),
+        #reference_index,
+        #reference_dict,
+        #expand(work_dir + '/input/{sample}.vcf', sample=samples),
+        #expand(work_dir + '/input/{sample}_select.vcf', sample=samples),
+        expand(work_dir + '/input/{sample}_snps.vcf', sample=samples)
 
 ##### Modules #####
 
 include:'/home/daria/snakemake/project-ib/rules/1_bam_index.smk'
-#include:"rules/2_ref_index.smk"
-#include:"rules/3_ref_dict.smk"
-#include:"rules/4_HC.smk"
-#include:"rules/5_select_snp.smk"
-#include:"rules/6_snp_filter.smk"
-#include:"rules/7_filter_indel.smk"
-#include:"rules/8_select_indel.smk"                                                                              
+include:'/home/daria/snakemake/project-ib/rules/2_ref_index.smk'
+include:'/home/daria/snakemake/project-ib/rules/3_ref_dict.smk'
+include:'/home/daria/snakemake/project-ib/rules/4_HC.smk'
+include:'/home/daria/snakemake/project-ib/rules/5_select_var.smk'
+include:'/home/daria/snakemake/project-ib/rules/6_snp_filter.smk'
+#include:'/home/daria/snakemake/project-ib/rules/7_filter_indel.smk'                                                                            

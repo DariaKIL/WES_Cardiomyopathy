@@ -1,0 +1,29 @@
+Building DAG of jobs...
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	HC
+	1	all
+	2	select_snp
+	4
+
+rule HC:
+    input: /home/daria/Documents/Project2/input/SoCHR22_hg19_1.bam
+    output: /home/daria/Documents/Project2/input/SoCHR22_hg19_1.vcf
+    jobid: 3
+    wildcards: sample=SoCHR22_hg19_1
+
+Terminating processes on user request.
+Error in rule HC:
+    jobid: 3
+    output: /home/daria/Documents/Project2/input/SoCHR22_hg19_1.vcf
+
+RuleException:
+CalledProcessError in line 8 of /home/daria/snakemake/project-ib/rules/4_HC.smk:
+Command ' set -euo pipefail;  gatk HaplotypeCaller -I /home/daria/Documents/Project2/input/SoCHR22_hg19_1.bam -R /home/daria/Documents/Project2/reference/hs37d5.fa -O /home/daria/Documents/Project2/input/SoCHR22_hg19_1.vcf ' returned non-zero exit status 1.
+  File "/home/daria/snakemake/project-ib/rules/4_HC.smk", line 8, in __rule_HC
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+Removing output files of failed job HC since they might be corrupted:
+/home/daria/Documents/Project2/input/SoCHR22_hg19_1.vcf
+Complete log: /home/daria/snakemake/project-ib/.snakemake/log/2019-04-21T191042.116353.snakemake.log

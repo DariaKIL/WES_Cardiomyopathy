@@ -1,0 +1,3 @@
+WildcardError in line 29 of /home/daria/snakemake/project-ib/Snakefile:
+No values given for wildcard 'sample'.
+  File "/home/daria/snakemake/project-ib/Snakefile", line 29, in <module>

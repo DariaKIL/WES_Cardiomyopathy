@@ -1,0 +1,3 @@
+SyntaxError in line 18 of /home/daria/snakemake/project-ib/rules/6_snp_filter.smk:
+Expecting rule keyword, comment or docstrings inside a rule definition. (6_snp_filter.smk, line 18)
+  File "/home/daria/snakemake/project-ib/Snakefile", line 38, in <module>

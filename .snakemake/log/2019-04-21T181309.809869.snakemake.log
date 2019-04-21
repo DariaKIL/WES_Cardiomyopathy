@@ -1,0 +1,19 @@
+Building DAG of jobs...
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	2	HC
+	1	all
+	1	ref_index
+	4
+
+rule ref_index:
+    input: /home/daria/Documents/Project2/reference/hs37d5.fa
+    output: /home/daria/Documents/Project2/reference/hs37d5.fai
+    jobid: 3
+
+Waiting at most 5 seconds for missing files.
+Will exit after finishing currently running jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/daria/snakemake/project-ib/.snakemake/log/2019-04-21T181309.809869.snakemake.log
