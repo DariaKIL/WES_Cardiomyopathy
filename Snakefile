@@ -2,7 +2,7 @@ configfile: 'config.yaml'
 
 import os, sys
 #Go to the working directory
-os.chdir('/home/daria/Documents/Project2')
+os.chdir('/home/kilina_da/project-ib')
 print('Current working dir : %s' % os.getcwd())
 work_dir = os.getcwd()
 
