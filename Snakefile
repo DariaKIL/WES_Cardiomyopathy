@@ -32,25 +32,33 @@ rule all:
         expand(work_dir + '/kilina_da/output/indel_left_trim_combine_genotype.g.vcf.gz'),
         expand(work_dir + '/kilina_da/output/filter_snp_left_trim_combine_genotype.g.vcf.gz'),
         expand(work_dir + '/kilina_da/output/filter_indel_left_trim_combine_genotype.g.vcf.gz'),
-        #work_dir + '/kilina_da/output/filter_snp_combine.g.vcf.gz',
-        #work_dir + '/kilina_da/output/filter_indel_combine.g.vcf.gz'
+        expand(work_dir + '/kilina_da/output/norm_filter_indel_left_combine_genotype.vcf'),
+        expand(work_dir + '/kilina_da/output/norm_filter_snp_left_combine_genotype.vcf'),
+        expand(work_dir + '/kilina_da/output/snp_myanno.hg19_multianno.vcf'),
+        expand(work_dir + '/kilina_da/output/indel_myanno.hg19_multianno.vcf'),
+        expand(work_dir + '/kilina_da/output/combine_genotype_snpEff.vcf'),
+
        
 
 
 ##### Modules #####
 
-#include:'/home/kilina_da/project-ib/rules/1_bam_index.smk'
-#include:'/home/kilina_da/project-ib/rules/2_ref_index.smk'
-#include:'/home/kilina_da/project-ib/rules/3_ref_dict.smk'
-#include:'/home/kilina_da/project-ib/rules/5_combine_GVCF.smk'
-#include:'/home/kilina_da/project-ib/rules/6_genotype_GVCF.smk'
-include:'/home/kilina_da/project-ib/rules/7_left_trim.smk'
-include:'/home/kilina_da/project-ib/rules/8_select_snp.smk'
-include:'/home/kilina_da/project-ib/rules/9_select_indel.smk'
+#include:'/home/kilina_da/project-ib/rules/01_bam_index.smk'
+#include:'/home/kilina_da/project-ib/rules/02_ref_index.smk'
+#include:'/home/kilina_da/project-ib/rules/03_ref_dict.smk'
+include:'/home/kilina_da/project-ib/rules/04_haplotype_caller.smk'
+include:'/home/kilina_da/project-ib/rules/05_combine_gvcf.smk'
+include:'/home/kilina_da/project-ib/rules/06_genotype_gvcf.smk'
+include:'/home/kilina_da/project-ib/rules/07_left_trim.smk'
+include:'/home/kilina_da/project-ib/rules/08_select_snp.smk'
+include:'/home/kilina_da/project-ib/rules/09_select_indel.smk'
 include:'/home/kilina_da/project-ib/rules/10_filter_snp.smk'
 include:'/home/kilina_da/project-ib/rules/11_filter_indel.smk'
-#include:'/home/kilina_da/project-ib/rules/12_annovar_snp.smk'
-#include:'/home/kilina_da/project-ib/rules/13_annovar_ind.smk'    
+include:'/home/kilina_da/project-ib/rules/12_bcftools_norm_ind.smk'
+include:'/home/kilina_da/project-ib/rules/13_bcftools_norm_snp.smk'
+include:'/home/kilina_da/project-ib/rules/14_annovar_snp.smk'
+include:'/home/kilina_da/project-ib/rules/15_annovar_ind.smk'
+include:'/home/kilina_da/project-ib/rules/16_snpEff.smk'    
 
 
 

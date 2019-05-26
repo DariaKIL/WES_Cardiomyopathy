@@ -1,6 +1,6 @@
 configfile: '/home/kilina_da/project-ib/config.yaml'
 
-rule HC:
+rule haplotype_caller:
     input: 
         work_dir + '/kilina_da/input/{sample}.bam',
     output: 
