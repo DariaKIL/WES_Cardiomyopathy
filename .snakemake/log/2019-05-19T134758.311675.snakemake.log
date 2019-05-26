@@ -1,0 +1,19 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	10	snpEff_ind
+	11
+
+[Sun May 19 13:47:58 2019]
+rule snpEff_ind:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_indels.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_indels_snpEff.vcf
+    jobid: 8
+    wildcards: sample=Kir.recal_pass2
+
+RuleException in line 6 of /home/kilina_da/project-ib/rules/9_snpEff_ind.smk:
+NameError: The name 'sample' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}

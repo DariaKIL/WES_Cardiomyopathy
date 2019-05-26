@@ -1,0 +1,13 @@
+Building DAG of jobs...
+MissingInputException in line 22 of /home/kilina_da/project-ib/Snakefile:
+Missing input files for rule all:
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/ounput/V_M.recal_pass2_select_indel.vcf
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/ounput/S_J.recal_pass2_select_indel.vcf
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/ounput/Kir.recal_pass2_select_indel.vcf
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/ounput/Ab_A.recal_pass2_select_indel.vcf
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/ounput/Kra.recal_pass2_select_indel.vcf
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/ounput/S_M.recal_pass2_select_indel.vcf
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/ounput/Sgi.recal_pass2_select_indel.vcf
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/ounput/V_R.recal_pass2_select_indel.vcf
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/ounput/Ab_s.recal_pass2_select_indel.vcf
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/ounput/Lop.recal_pass2_select_indel.vcf

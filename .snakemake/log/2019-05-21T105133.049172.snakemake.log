@@ -1,0 +1,29 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	10	HC
+	1	all
+	11
+
+[Tue May 21 10:51:33 2019]
+rule HC:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/ExomesData/Lop.recal_pass2.bam
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2.g.vcf.gz
+    jobid: 10
+    wildcards: sample=Lop.recal_pass2
+    priority: 2
+
+Terminating processes on user request, this might take some time.
+[Tue May 21 10:51:39 2019]
+Error in rule HC:
+    jobid: 10
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2.g.vcf.gz
+    shell:
+        ~/gatk-4.1.2.0/gatk HaplotypeCaller -I /mnt/IMBG-NGS-Analysys/StudentsWork/ExomesData/Lop.recal_pass2.bam -R /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/reference/hs37d5.fa -O /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2.g.vcf.gz -ERC GVCF
+
+Removing output files of failed job HC since they might be corrupted:
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2.g.vcf.gz
+Complete log: /home/kilina_da/project-ib/.snakemake/log/2019-05-21T105133.049172.snakemake.log

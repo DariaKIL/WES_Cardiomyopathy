@@ -1,0 +1,26 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	10	annovar
+	11
+
+[Sun May 19 16:51:08 2019]
+rule annovar:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_snps_left.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_snps_anno.vcf
+    jobid: 8
+    wildcards: sample=Kir.recal_pass2
+
+Terminating processes on user request, this might take some time.
+[Sun May 19 16:51:11 2019]
+Error in rule annovar:
+    jobid: 8
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_snps_anno.vcf
+    shell:
+         ~/annovar/table_annovar.pl /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_snps_left.vcf ~/annovar/humandb/ -buildver hg19 -out /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_snps_anno.vcf -remove -protocol dbnsfp30a -operation f -nastring . -vcfinput
+
+Complete log: /home/kilina_da/project-ib/.snakemake/log/2019-05-19T165108.126375.snakemake.log

@@ -1,6 +1,9 @@
-ref:
-  genome: "/home/daria/Documents/Project2/reference/hs37d5.fa"
+ref: '/mnt/IMBG-NGS-Analysys/StudentWork/reference/hs37d5.fa'
 
-bam_file: "/home/daria/Documents/Project2/input/"
+bam_file: '/mnt/IMBG-NGS-Analysys/StudentWork/input/'
 
-gatk: "/home/daria/Documents/Project2/gatk-4.1.0.0/gatk"
+gatk: '/home/daria/gatk-4.1.0.0/gatk'
+
+dbsnp: '/mnt/IMBG-NGS-Analysys/StudentWork/reference/00-All.vcf'
+
+bed_file: '/mnt/IMBG-NGS-Analysys/StudentWork/reference/Agilent_ExomeV6_S07604514_Padded.picard.interval_list'

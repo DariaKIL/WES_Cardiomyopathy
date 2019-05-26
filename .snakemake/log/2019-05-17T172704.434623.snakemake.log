@@ -1,0 +1,502 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	10	indel_filter
+	10	select_indel
+	10	select_snp
+	10	snp_filter
+	41
+
+[Fri May 17 17:27:04 2019]
+rule select_snp:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_select_snp.vcf
+    jobid: 8
+    wildcards: sample=Kir.recal_pass2
+    priority: 3
+
+[Fri May 17 17:27:28 2019]
+Finished job 8.
+1 of 41 steps (2%) done
+
+[Fri May 17 17:27:28 2019]
+rule snp_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_select_snp.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_snps.vcf
+    jobid: 28
+    wildcards: sample=Kir.recal_pass2
+    priority: 4
+
+[Fri May 17 17:27:59 2019]
+Finished job 28.
+2 of 41 steps (5%) done
+
+[Fri May 17 17:27:59 2019]
+rule select_indel:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_select_indel.vcf
+    jobid: 18
+    wildcards: sample=Kir.recal_pass2
+    priority: 3
+
+[Fri May 17 17:28:12 2019]
+Finished job 18.
+3 of 41 steps (7%) done
+
+[Fri May 17 17:28:12 2019]
+rule indel_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_select_indel.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_indels.vcf
+    jobid: 38
+    wildcards: sample=Kir.recal_pass2
+    priority: 4
+
+[Fri May 17 17:28:20 2019]
+Finished job 38.
+4 of 41 steps (10%) done
+
+[Fri May 17 17:28:20 2019]
+rule select_indel:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2_select_indel.vcf
+    jobid: 20
+    wildcards: sample=Lop.recal_pass2
+    priority: 3
+
+[Fri May 17 17:28:31 2019]
+Finished job 20.
+5 of 41 steps (12%) done
+
+[Fri May 17 17:28:31 2019]
+rule indel_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2_select_indel.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2_indels.vcf
+    jobid: 40
+    wildcards: sample=Lop.recal_pass2
+    priority: 4
+
+[Fri May 17 17:28:39 2019]
+Finished job 40.
+6 of 41 steps (15%) done
+
+[Fri May 17 17:28:39 2019]
+rule select_snp:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2_select_snp.vcf
+    jobid: 10
+    wildcards: sample=Lop.recal_pass2
+    priority: 3
+
+[Fri May 17 17:28:57 2019]
+Finished job 10.
+7 of 41 steps (17%) done
+
+[Fri May 17 17:28:57 2019]
+rule snp_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2_select_snp.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2_snps.vcf
+    jobid: 30
+    wildcards: sample=Lop.recal_pass2
+    priority: 4
+
+[Fri May 17 17:29:24 2019]
+Finished job 30.
+8 of 41 steps (20%) done
+
+[Fri May 17 17:29:24 2019]
+rule select_snp:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kra.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kra.recal_pass2_select_snp.vcf
+    jobid: 9
+    wildcards: sample=Kra.recal_pass2
+    priority: 3
+
+[Fri May 17 17:29:41 2019]
+Finished job 9.
+9 of 41 steps (22%) done
+
+[Fri May 17 17:29:41 2019]
+rule snp_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kra.recal_pass2_select_snp.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kra.recal_pass2_snps.vcf
+    jobid: 29
+    wildcards: sample=Kra.recal_pass2
+    priority: 4
+
+[Fri May 17 17:30:04 2019]
+Finished job 29.
+10 of 41 steps (24%) done
+
+[Fri May 17 17:30:04 2019]
+rule select_indel:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kra.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kra.recal_pass2_select_indel.vcf
+    jobid: 19
+    wildcards: sample=Kra.recal_pass2
+    priority: 3
+
+[Fri May 17 17:30:13 2019]
+Finished job 19.
+11 of 41 steps (27%) done
+
+[Fri May 17 17:30:13 2019]
+rule indel_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kra.recal_pass2_select_indel.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kra.recal_pass2_indels.vcf
+    jobid: 39
+    wildcards: sample=Kra.recal_pass2
+    priority: 4
+
+[Fri May 17 17:30:19 2019]
+Finished job 39.
+12 of 41 steps (29%) done
+
+[Fri May 17 17:30:19 2019]
+rule select_indel:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_s.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_s.recal_pass2_select_indel.vcf
+    jobid: 12
+    wildcards: sample=Ab_s.recal_pass2
+    priority: 3
+
+[Fri May 17 17:30:26 2019]
+Finished job 12.
+13 of 41 steps (32%) done
+
+[Fri May 17 17:30:26 2019]
+rule indel_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_s.recal_pass2_select_indel.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_s.recal_pass2_indels.vcf
+    jobid: 32
+    wildcards: sample=Ab_s.recal_pass2
+    priority: 4
+
+[Fri May 17 17:30:32 2019]
+Finished job 32.
+14 of 41 steps (34%) done
+
+[Fri May 17 17:30:32 2019]
+rule select_snp:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_s.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_s.recal_pass2_select_snp.vcf
+    jobid: 2
+    wildcards: sample=Ab_s.recal_pass2
+    priority: 3
+
+[Fri May 17 17:30:42 2019]
+Finished job 2.
+15 of 41 steps (37%) done
+
+[Fri May 17 17:30:42 2019]
+rule snp_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_s.recal_pass2_select_snp.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_s.recal_pass2_snps.vcf
+    jobid: 22
+    wildcards: sample=Ab_s.recal_pass2
+    priority: 4
+
+[Fri May 17 17:30:54 2019]
+Finished job 22.
+16 of 41 steps (39%) done
+
+[Fri May 17 17:30:54 2019]
+rule select_indel:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_R.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_R.recal_pass2_select_indel.vcf
+    jobid: 17
+    wildcards: sample=V_R.recal_pass2
+    priority: 3
+
+[Fri May 17 17:31:01 2019]
+Finished job 17.
+17 of 41 steps (41%) done
+
+[Fri May 17 17:31:01 2019]
+rule indel_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_R.recal_pass2_select_indel.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_R.recal_pass2_indels.vcf
+    jobid: 37
+    wildcards: sample=V_R.recal_pass2
+    priority: 4
+
+[Fri May 17 17:31:07 2019]
+Finished job 37.
+18 of 41 steps (44%) done
+
+[Fri May 17 17:31:07 2019]
+rule select_snp:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_R.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_R.recal_pass2_select_snp.vcf
+    jobid: 7
+    wildcards: sample=V_R.recal_pass2
+    priority: 3
+
+[Fri May 17 17:31:16 2019]
+Finished job 7.
+19 of 41 steps (46%) done
+
+[Fri May 17 17:31:16 2019]
+rule snp_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_R.recal_pass2_select_snp.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_R.recal_pass2_snps.vcf
+    jobid: 27
+    wildcards: sample=V_R.recal_pass2
+    priority: 4
+
+[Fri May 17 17:31:28 2019]
+Finished job 27.
+20 of 41 steps (49%) done
+
+[Fri May 17 17:31:28 2019]
+rule select_snp:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_M.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_M.recal_pass2_select_snp.vcf
+    jobid: 6
+    wildcards: sample=V_M.recal_pass2
+    priority: 3
+
+[Fri May 17 17:31:37 2019]
+Finished job 6.
+21 of 41 steps (51%) done
+
+[Fri May 17 17:31:37 2019]
+rule snp_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_M.recal_pass2_select_snp.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_M.recal_pass2_snps.vcf
+    jobid: 26
+    wildcards: sample=V_M.recal_pass2
+    priority: 4
+
+[Fri May 17 17:31:48 2019]
+Finished job 26.
+22 of 41 steps (54%) done
+
+[Fri May 17 17:31:48 2019]
+rule select_indel:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_M.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_M.recal_pass2_select_indel.vcf
+    jobid: 16
+    wildcards: sample=V_M.recal_pass2
+    priority: 3
+
+[Fri May 17 17:31:55 2019]
+Finished job 16.
+23 of 41 steps (56%) done
+
+[Fri May 17 17:31:55 2019]
+rule indel_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_M.recal_pass2_select_indel.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_M.recal_pass2_indels.vcf
+    jobid: 36
+    wildcards: sample=V_M.recal_pass2
+    priority: 4
+
+[Fri May 17 17:32:00 2019]
+Finished job 36.
+24 of 41 steps (59%) done
+
+[Fri May 17 17:32:00 2019]
+rule select_snp:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_M.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_M.recal_pass2_select_snp.vcf
+    jobid: 5
+    wildcards: sample=S_M.recal_pass2
+    priority: 3
+
+[Fri May 17 17:32:10 2019]
+Finished job 5.
+25 of 41 steps (61%) done
+
+[Fri May 17 17:32:10 2019]
+rule snp_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_M.recal_pass2_select_snp.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_M.recal_pass2_snps.vcf
+    jobid: 25
+    wildcards: sample=S_M.recal_pass2
+    priority: 4
+
+[Fri May 17 17:32:21 2019]
+Finished job 25.
+26 of 41 steps (63%) done
+
+[Fri May 17 17:32:21 2019]
+rule select_indel:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_M.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_M.recal_pass2_select_indel.vcf
+    jobid: 15
+    wildcards: sample=S_M.recal_pass2
+    priority: 3
+
+[Fri May 17 17:32:27 2019]
+Finished job 15.
+27 of 41 steps (66%) done
+
+[Fri May 17 17:32:27 2019]
+rule indel_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_M.recal_pass2_select_indel.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_M.recal_pass2_indels.vcf
+    jobid: 35
+    wildcards: sample=S_M.recal_pass2
+    priority: 4
+
+[Fri May 17 17:32:33 2019]
+Finished job 35.
+28 of 41 steps (68%) done
+
+[Fri May 17 17:32:33 2019]
+rule select_snp:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_A.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_A.recal_pass2_select_snp.vcf
+    jobid: 1
+    wildcards: sample=Ab_A.recal_pass2
+    priority: 3
+
+[Fri May 17 17:32:42 2019]
+Finished job 1.
+29 of 41 steps (71%) done
+
+[Fri May 17 17:32:42 2019]
+rule snp_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_A.recal_pass2_select_snp.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_A.recal_pass2_snps.vcf
+    jobid: 21
+    wildcards: sample=Ab_A.recal_pass2
+    priority: 4
+
+[Fri May 17 17:32:52 2019]
+Finished job 21.
+30 of 41 steps (73%) done
+
+[Fri May 17 17:32:52 2019]
+rule select_indel:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_A.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_A.recal_pass2_select_indel.vcf
+    jobid: 11
+    wildcards: sample=Ab_A.recal_pass2
+    priority: 3
+
+[Fri May 17 17:32:57 2019]
+Finished job 11.
+31 of 41 steps (76%) done
+
+[Fri May 17 17:32:57 2019]
+rule indel_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_A.recal_pass2_select_indel.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_A.recal_pass2_indels.vcf
+    jobid: 31
+    wildcards: sample=Ab_A.recal_pass2
+    priority: 4
+
+[Fri May 17 17:33:03 2019]
+Finished job 31.
+32 of 41 steps (78%) done
+
+[Fri May 17 17:33:03 2019]
+rule select_indel:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_J.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_J.recal_pass2_select_indel.vcf
+    jobid: 14
+    wildcards: sample=S_J.recal_pass2
+    priority: 3
+
+[Fri May 17 17:33:09 2019]
+Finished job 14.
+33 of 41 steps (80%) done
+
+[Fri May 17 17:33:09 2019]
+rule indel_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_J.recal_pass2_select_indel.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_J.recal_pass2_indels.vcf
+    jobid: 34
+    wildcards: sample=S_J.recal_pass2
+    priority: 4
+
+[Fri May 17 17:33:15 2019]
+Finished job 34.
+34 of 41 steps (83%) done
+
+[Fri May 17 17:33:15 2019]
+rule select_snp:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_J.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_J.recal_pass2_select_snp.vcf
+    jobid: 4
+    wildcards: sample=S_J.recal_pass2
+    priority: 3
+
+[Fri May 17 17:33:24 2019]
+Finished job 4.
+35 of 41 steps (85%) done
+
+[Fri May 17 17:33:24 2019]
+rule snp_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_J.recal_pass2_select_snp.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_J.recal_pass2_snps.vcf
+    jobid: 24
+    wildcards: sample=S_J.recal_pass2
+    priority: 4
+
+[Fri May 17 17:33:34 2019]
+Finished job 24.
+36 of 41 steps (88%) done
+
+[Fri May 17 17:33:34 2019]
+rule select_snp:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Sgi.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Sgi.recal_pass2_select_snp.vcf
+    jobid: 3
+    wildcards: sample=Sgi.recal_pass2
+    priority: 3
+
+[Fri May 17 17:33:42 2019]
+Finished job 3.
+37 of 41 steps (90%) done
+
+[Fri May 17 17:33:42 2019]
+rule snp_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Sgi.recal_pass2_select_snp.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Sgi.recal_pass2_snps.vcf
+    jobid: 23
+    wildcards: sample=Sgi.recal_pass2
+    priority: 4
+
+[Fri May 17 17:33:52 2019]
+Finished job 23.
+38 of 41 steps (93%) done
+
+[Fri May 17 17:33:52 2019]
+rule select_indel:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Sgi.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Sgi.recal_pass2_select_indel.vcf
+    jobid: 13
+    wildcards: sample=Sgi.recal_pass2
+    priority: 3
+
+[Fri May 17 17:33:59 2019]
+Finished job 13.
+39 of 41 steps (95%) done
+
+[Fri May 17 17:33:59 2019]
+rule indel_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Sgi.recal_pass2_select_indel.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Sgi.recal_pass2_indels.vcf
+    jobid: 33
+    wildcards: sample=Sgi.recal_pass2
+    priority: 4
+
+[Fri May 17 17:34:04 2019]
+Finished job 33.
+40 of 41 steps (98%) done
+
+[Fri May 17 17:34:04 2019]
+localrule all:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_A.recal_pass2_select_snp.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_s.recal_pass2_select_snp.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Sgi.recal_pass2_select_snp.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_J.recal_pass2_select_snp.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_M.recal_pass2_select_snp.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_M.recal_pass2_select_snp.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_R.recal_pass2_select_snp.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_select_snp.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kra.recal_pass2_select_snp.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2_select_snp.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_A.recal_pass2_select_indel.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_s.recal_pass2_select_indel.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Sgi.recal_pass2_select_indel.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_J.recal_pass2_select_indel.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_M.recal_pass2_select_indel.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_M.recal_pass2_select_indel.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_R.recal_pass2_select_indel.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_select_indel.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kra.recal_pass2_select_indel.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2_select_indel.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_A.recal_pass2_snps.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_s.recal_pass2_snps.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Sgi.recal_pass2_snps.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_J.recal_pass2_snps.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_M.recal_pass2_snps.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_M.recal_pass2_snps.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_R.recal_pass2_snps.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_snps.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kra.recal_pass2_snps.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2_snps.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_A.recal_pass2_indels.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Ab_s.recal_pass2_indels.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Sgi.recal_pass2_indels.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_J.recal_pass2_indels.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/S_M.recal_pass2_indels.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_M.recal_pass2_indels.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/V_R.recal_pass2_indels.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_indels.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kra.recal_pass2_indels.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2_indels.vcf
+    jobid: 0
+
+[Fri May 17 17:34:04 2019]
+Finished job 0.
+41 of 41 steps (100%) done
+Complete log: /home/kilina_da/project-ib/.snakemake/log/2019-05-17T172704.434623.snakemake.log

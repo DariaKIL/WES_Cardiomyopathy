@@ -1,0 +1,117 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	10	HC
+	1	all
+	10	indel_filter
+	10	select_var
+	10	snp_filter
+	41
+
+[Fri May 10 11:47:32 2019]
+rule HC:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/ExomesData/Lop.recal_pass2.bam
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Lop.recal_pass2.vcf
+    jobid: 10
+    wildcards: sample=Lop.recal_pass2
+    priority: 2
+
+[Fri May 10 15:08:07 2019]
+Finished job 10.
+1 of 41 steps (2%) done
+
+[Fri May 10 15:08:07 2019]
+rule select_var:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Lop.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Lop.recal_pass2_select.vcf
+    jobid: 20
+    wildcards: sample=Lop.recal_pass2
+    priority: 3
+
+[Fri May 10 15:08:30 2019]
+Finished job 20.
+2 of 41 steps (5%) done
+
+[Fri May 10 15:08:30 2019]
+rule snp_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Lop.recal_pass2_select.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Lop.recal_pass2_snps.vcf
+    jobid: 30
+    wildcards: sample=Lop.recal_pass2
+    priority: 4
+
+[Fri May 10 15:08:59 2019]
+Finished job 30.
+3 of 41 steps (7%) done
+
+[Fri May 10 15:08:59 2019]
+rule indel_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Lop.recal_pass2_select.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Lop.recal_pass2_indels.vcf
+    jobid: 40
+    wildcards: sample=Lop.recal_pass2
+    priority: 4
+
+[Fri May 10 15:09:25 2019]
+Finished job 40.
+4 of 41 steps (10%) done
+
+[Fri May 10 15:09:25 2019]
+rule HC:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/ExomesData/Kir.recal_pass2.bam
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Kir.recal_pass2.vcf
+    jobid: 8
+    wildcards: sample=Kir.recal_pass2
+    priority: 2
+
+[Fri May 10 18:39:50 2019]
+Finished job 8.
+5 of 41 steps (12%) done
+
+[Fri May 10 18:39:50 2019]
+rule select_var:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Kir.recal_pass2.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Kir.recal_pass2_select.vcf
+    jobid: 18
+    wildcards: sample=Kir.recal_pass2
+    priority: 3
+
+[Fri May 10 18:40:15 2019]
+Finished job 18.
+6 of 41 steps (15%) done
+
+[Fri May 10 18:40:15 2019]
+rule indel_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Kir.recal_pass2_select.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Kir.recal_pass2_indels.vcf
+    jobid: 38
+    wildcards: sample=Kir.recal_pass2
+    priority: 4
+
+[Fri May 10 18:40:45 2019]
+Finished job 38.
+7 of 41 steps (17%) done
+
+[Fri May 10 18:40:45 2019]
+rule snp_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Kir.recal_pass2_select.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Kir.recal_pass2_snps.vcf
+    jobid: 28
+    wildcards: sample=Kir.recal_pass2
+    priority: 4
+
+[Fri May 10 18:41:17 2019]
+Finished job 28.
+8 of 41 steps (20%) done
+
+[Fri May 10 18:41:17 2019]
+rule HC:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/ExomesData/Kra.recal_pass2.bam
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/output/Kra.recal_pass2.vcf
+    jobid: 9
+    wildcards: sample=Kra.recal_pass2
+    priority: 2
+

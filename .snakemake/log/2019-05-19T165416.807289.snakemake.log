@@ -1,0 +1,4 @@
+CreateRuleException in line 3 of /home/kilina_da/project-ib/rules/13_annovar_ind.smk:
+The name annovar is already used by another rule
+  File "/home/kilina_da/project-ib/Snakefile", line 53, in <module>
+  File "/home/kilina_da/project-ib/rules/13_annovar_ind.smk", line 3, in <module>

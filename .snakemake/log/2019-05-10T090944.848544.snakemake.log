@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	2	HC
+	1	all
+	2	bam_index
+	2	indel_filter
+	2	select_var
+	2	snp_filter
+	11
+
+[Fri May 10 09:09:44 2019]
+rule HC:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/input/SoCHR22_hg19.bam
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/input/SoCHR22_hg19.vcf
+    jobid: 5
+    wildcards: sample=SoCHR22_hg19
+    priority: 2
+
+[Fri May 10 09:09:44 2019]
+Error in rule HC:
+    jobid: 5
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/input/SoCHR22_hg19.vcf
+    shell:
+        gatk HaplotypeCaller -I /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/input/SoCHR22_hg19.bam -R /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/reference/hs37d5.fa -O /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/input/SoCHR22_hg19.vcf
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/kilina_da/project-ib/.snakemake/log/2019-05-10T090944.848544.snakemake.log

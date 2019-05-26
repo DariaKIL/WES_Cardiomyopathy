@@ -1,0 +1,4 @@
+WorkflowError in line 1 of /home/kilina_da/project-ib/rules/7_filter_indel.smk:
+Config file /home/kilina_diiproject-ib/config.yaml not found.
+  File "/home/kilina_da/project-ib/Snakefile", line 41, in <module>
+  File "/home/kilina_da/project-ib/rules/7_filter_indel.smk", line 1, in <module>

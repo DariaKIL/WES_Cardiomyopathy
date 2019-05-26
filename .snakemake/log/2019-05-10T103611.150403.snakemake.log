@@ -1,0 +1,43 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	2	HC
+	1	all
+	2	indel_filter
+	2	select_var
+	2	snp_filter
+	9
+
+[Fri May 10 10:36:11 2019]
+rule HC:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/input/SoCHR22_hg19_1.bam
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1.vcf
+    jobid: 2
+    wildcards: sample=SoCHR22_hg19_1
+    priority: 2
+
+[Fri May 10 10:46:36 2019]
+Finished job 2.
+1 of 9 steps (11%) done
+
+[Fri May 10 10:46:36 2019]
+rule select_var:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1_select.vcf
+    jobid: 4
+    wildcards: sample=SoCHR22_hg19_1
+    priority: 3
+
+[Fri May 10 10:46:38 2019]
+Error in rule select_var:
+    jobid: 4
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1_select.vcf
+    shell:
+        ~/gatk-4.1.2.0/gatk SelectVariants -R /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/reference/hs37d5.fa -V /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1.vcf -О /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1_select.vcf
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/kilina_da/project-ib/.snakemake/log/2019-05-10T103611.150403.snakemake.log

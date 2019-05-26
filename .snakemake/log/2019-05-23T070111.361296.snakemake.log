@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 3 of /home/kilina_da/project-ib/rules/7_left_trim.smk:
+Missing input files for rule left_trim:
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/combine_genotype.g.vcf.gz

@@ -2,40 +2,57 @@ configfile: 'config.yaml'
 
 import os, sys
 #Go to the working directory
-os.chdir('/home/kilina_da/project-ib')
+os.chdir('/mnt/IMBG-NGS-Analysys/StudentsWork')
 print('Current working dir : %s' % os.getcwd())
 work_dir = os.getcwd()
 
 #Reference
-reference_path = work_dir + '/reference'
+reference_path = work_dir + '/kilina_da/reference'
 reference_name = '/hs37d5'
-reference_file_extension = 'fa'
-ref = '{}{}.{}'.format(reference_path, reference_name, reference_file_extension)
+reference_ext = 'fa'
+ref = '{}{}.{}'.format(reference_path, reference_name, reference_ext)
 
-reference_index = reference_path + reference_name + '.fai'
+reference_index = reference_path + reference_name + reference_ext + '.fai'
 reference_dict = reference_path + reference_name + '.dict'
 
 #For samples
-samples, = glob_wildcards(work_dir + "/input/{sample}.bam")
+samples, = glob_wildcards(work_dir + '/ExomesData/{sample}.bam')
 print('BAM files:' + str(samples))
 
 rule all:
     input:
-        expand(work_dir + '/input/{sample}.bam.bai', sample=samples),
-        reference_index,
-        reference_dict,
-        expand(work_dir + '/input/{sample}.vcf', sample=samples),
-        expand(work_dir + '/input/{sample}_select.vcf', sample=samples),
-        expand(work_dir + '/input/{sample}_snps.vcf', sample=samples),
-        expand(work_dir + '/input/{sample}_indels.vcf', sample=samples)
+        #expand(work_dir + '/ExomesData/{sample}.bam.bai', sample=samples),
+        #reference_index,
+        #reference_dict,
+        expand(work_dir + '/kilina_da/output/{sample}.g.vcf.gz', sample=samples),
+        work_dir + '/kilina_da/output/combine.g.vcf.gz',
+        work_dir + '/kilina_da/output/combine_genotype.g.vcf.gz',
+        expand(work_dir + '/kilina_da/output/left_trim_combine_genotype.g.vcf.gz'),
+        expand(work_dir + '/kilina_da/output/snp_left_trim_combine_genotype.g.vcf.gz'),
+        expand(work_dir + '/kilina_da/output/indel_left_trim_combine_genotype.g.vcf.gz'),
+        expand(work_dir + '/kilina_da/output/filter_snp_left_trim_combine_genotype.g.vcf.gz'),
+        expand(work_dir + '/kilina_da/output/filter_indel_left_trim_combine_genotype.g.vcf.gz'),
+        #work_dir + '/kilina_da/output/filter_snp_combine.g.vcf.gz',
+        #work_dir + '/kilina_da/output/filter_indel_combine.g.vcf.gz'
+       
 
 
 ##### Modules #####
 
-include:'/home/daria/snakemake/project-ib/rules/1_bam_index.smk'
-include:'/home/daria/snakemake/project-ib/rules/2_ref_index.smk'
-include:'/home/daria/snakemake/project-ib/rules/3_ref_dict.smk'
-include:'/home/daria/snakemake/project-ib/rules/4_HC.smk'
-include:'/home/daria/snakemake/project-ib/rules/5_select_var.smk'
-include:'/home/daria/snakemake/project-ib/rules/6_snp_filter.smk'
-include:'/home/daria/snakemake/project-ib/rules/7_filter_indel.smk'                                                                            
+#include:'/home/kilina_da/project-ib/rules/1_bam_index.smk'
+#include:'/home/kilina_da/project-ib/rules/2_ref_index.smk'
+#include:'/home/kilina_da/project-ib/rules/3_ref_dict.smk'
+#include:'/home/kilina_da/project-ib/rules/5_combine_GVCF.smk'
+#include:'/home/kilina_da/project-ib/rules/6_genotype_GVCF.smk'
+include:'/home/kilina_da/project-ib/rules/7_left_trim.smk'
+include:'/home/kilina_da/project-ib/rules/8_select_snp.smk'
+include:'/home/kilina_da/project-ib/rules/9_select_indel.smk'
+include:'/home/kilina_da/project-ib/rules/10_filter_snp.smk'
+include:'/home/kilina_da/project-ib/rules/11_filter_indel.smk'
+#include:'/home/kilina_da/project-ib/rules/12_annovar_snp.smk'
+#include:'/home/kilina_da/project-ib/rules/13_annovar_ind.smk'    
+
+
+
+
+

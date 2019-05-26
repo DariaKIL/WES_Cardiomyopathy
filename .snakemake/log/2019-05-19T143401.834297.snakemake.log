@@ -1,0 +1,30 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	10	leftAlign_ind
+	10	leftAlign_snp
+	21
+
+[Sun May 19 14:34:01 2019]
+rule leftAlign_snp:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_snps.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_snps_left.vcf
+    jobid: 18
+    wildcards: sample=Kir.recal_pass2
+    priority: 4
+
+Terminating processes on user request, this might take some time.
+[Sun May 19 14:34:06 2019]
+Error in rule leftAlign_snp:
+    jobid: 18
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_snps_left.vcf
+    shell:
+        ~/gatk-4.1.2.0/gatk LeftAlignAndTrimVariants -R /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/reference/hs37d5.fa -V /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_snps.vcf -O /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_snps_left.vcf --split-multi-allelics
+
+Removing output files of failed job leftAlign_snp since they might be corrupted:
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_snps_left.vcf
+Complete log: /home/kilina_da/project-ib/.snakemake/log/2019-05-19T143401.834297.snakemake.log

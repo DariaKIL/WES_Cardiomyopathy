@@ -1,0 +1,105 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	HC
+	1	all
+	2	indel_filter
+	2	select_var
+	2	snp_filter
+	8
+
+[Fri May 10 11:02:45 2019]
+rule select_var:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1_select.vcf
+    jobid: 3
+    wildcards: sample=SoCHR22_hg19_1
+    priority: 3
+
+[Fri May 10 11:02:50 2019]
+Finished job 3.
+1 of 8 steps (12%) done
+
+[Fri May 10 11:02:50 2019]
+rule indel_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1_select.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1_indels.vcf
+    jobid: 7
+    wildcards: sample=SoCHR22_hg19_1
+    priority: 4
+
+[Fri May 10 11:02:55 2019]
+Finished job 7.
+2 of 8 steps (25%) done
+
+[Fri May 10 11:02:55 2019]
+rule snp_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1_select.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1_snps.vcf
+    jobid: 5
+    wildcards: sample=SoCHR22_hg19_1
+    priority: 4
+
+[Fri May 10 11:03:00 2019]
+Finished job 5.
+3 of 8 steps (38%) done
+
+[Fri May 10 11:03:00 2019]
+rule HC:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/input/SoCHR22_hg19.bam
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19.vcf
+    jobid: 1
+    priority: 2
+
+[Fri May 10 11:13:14 2019]
+Finished job 1.
+4 of 8 steps (50%) done
+
+[Fri May 10 11:13:14 2019]
+rule select_var:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_select.vcf
+    jobid: 2
+    wildcards: sample=SoCHR22_hg19
+    priority: 3
+
+[Fri May 10 11:13:19 2019]
+Finished job 2.
+5 of 8 steps (62%) done
+
+[Fri May 10 11:13:19 2019]
+rule snp_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_select.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_snps.vcf
+    jobid: 4
+    wildcards: sample=SoCHR22_hg19
+    priority: 4
+
+[Fri May 10 11:13:24 2019]
+Finished job 4.
+6 of 8 steps (75%) done
+
+[Fri May 10 11:13:24 2019]
+rule indel_filter:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_select.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_indels.vcf
+    jobid: 6
+    wildcards: sample=SoCHR22_hg19
+    priority: 4
+
+[Fri May 10 11:13:29 2019]
+Finished job 6.
+7 of 8 steps (88%) done
+
+[Fri May 10 11:13:29 2019]
+localrule all:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_select.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1_select.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_snps.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1_snps.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_indels.vcf, /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/SoCHR22_hg19_1_indels.vcf
+    jobid: 0
+
+[Fri May 10 11:13:29 2019]
+Finished job 0.
+8 of 8 steps (100%) done
+Complete log: /home/kilina_da/project-ib/.snakemake/log/2019-05-10T110245.532827.snakemake.log

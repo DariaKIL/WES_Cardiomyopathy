@@ -1,0 +1,4 @@
+WorkflowError in line 1 of /home/kilina_da/project-ib/rules/2_ref_index.smk:
+Config file /home/daria/snakemake/project-ib/config.yaml not found.
+  File "/home/kilina_da/project-ib/Snakefile", line 36, in <module>
+  File "/home/kilina_da/project-ib/rules/2_ref_index.smk", line 1, in <module>

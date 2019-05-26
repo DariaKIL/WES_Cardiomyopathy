@@ -1,0 +1,29 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	10	snpEff_ind
+	11
+
+[Sun May 19 13:50:26 2019]
+rule snpEff_ind:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_indels.vcf
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_indels_snpEff.vcf
+    jobid: 8
+    wildcards: sample=Kir.recal_pass2
+
+[Sun May 19 14:20:13 2019]
+Error in rule snpEff_ind:
+    jobid: 8
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_indels_snpEff.vcf
+    shell:
+        java -Xmx4g -jar ~/snpEff/snpEff.jar GRCh37.75 -stats ~/snpEff/html/ /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_indels.vcf > /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_indels_snpEff.vcf
+
+Removing output files of failed job snpEff_ind since they might be corrupted:
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Kir.recal_pass2_indels_snpEff.vcf
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/kilina_da/project-ib/.snakemake/log/2019-05-19T135026.487402.snakemake.log
