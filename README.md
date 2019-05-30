@@ -15,6 +15,7 @@ All stages are included in the Snakemake pipeline, presented in this repository.
 10 different samples WES from patients with idiopathic cases of caridiomyopathy
 
 ## Methods
+```
 bcftools - sudo apt install bcftools
 GATK-4.1.2.0 - https://software.broadinstitute.org/gatk/download/
 annovar - http://download.openbioinformatics.org/annovar_download_form.php
@@ -41,5 +42,6 @@ Snakefile - executable file for Snakemake. To run, simply type snakemake in term
 13_snpEff.smk' - Annotate combine gvcf file by snpEff
 /snpEff - result from snpEff
 /QC3 - result from QC3
+```
 
 
