@@ -42,10 +42,3 @@ Snakefile - executable file for Snakemake. To run, simply type snakemake in term
 13_snpEff.smk' - Annotate combine gvcf file by snpEff
 /snpEff - result from snpEff
 /QC3 - result from QC3
-
-
-Genotype cogort GVCF file
-Select variants to SNP and INDELS
-Filtering variants to SNP and INDELS
-Annotation by Annovar and SnpEff
-Select clinically relevant variant
