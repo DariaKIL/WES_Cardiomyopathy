@@ -1,21 +1,20 @@
 Pipeline for variant calling by HaplotypeCaller (GATK)
 
-Description
+# Description
 Laboratory of Molecular Biology and Genetics of Federal Almazov Medical Research Center regularly performs exom sequencing in patients. As a rule, prior to whole exom sequencing (WES), the analysis of the hereditary nature of the disease is carried out and these patients are sequenced on small panels with targeted enrichment of the genes described in the literature and known as causal in different type of cardiomyopathy. If the small panel does not produce results, then WES can be conduct and the analysis of rare variants using frequency databases allows identifying pathogenic variants in ~ 70% of such patients.
 
-Goals and objectives
+## Goals and objectives
 Our goal was to detect previously unknown variants of SNP and indels in patients with different types of idiopathic cardiomyopathies.
-
 
 Write Pipeline for Variant Calling and Variant Filtration
 Analyze data with HaplotypeCaller
 Annotate with Annovar, SnpEff.
 All stages are included in the Snakemake pipeline, presented in this repository.
 
-Material
+## Material
 10 different samples WES from patients with idiopathic cases of caridiomyopathy
 
-Methods
+## Methods
 bcftools - sudo apt install bcftools
 GATK-4.1.2.0 - https://software.broadinstitute.org/gatk/download/
 annovar - http://download.openbioinformatics.org/annovar_download_form.php
@@ -42,3 +41,5 @@ Snakefile - executable file for Snakemake. To run, simply type snakemake in term
 13_snpEff.smk' - Annotate combine gvcf file by snpEff
 /snpEff - result from snpEff
 /QC3 - result from QC3
+
+
