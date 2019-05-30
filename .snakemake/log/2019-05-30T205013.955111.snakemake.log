@@ -1,0 +1,48 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	anovar_ind
+	1	anovar_snp
+	1	bcftools_norm_ind
+	1	bcftools_norm_snp
+	1	combine_gvcf
+	1	genotype_gvcf
+	10	haplotype_caller
+	1	indel_filter
+	1	left_trim
+	1	select_indel
+	1	select_snp
+	1	snpEff_snp
+	1	snp_filter
+	23
+
+[Thu May 30 20:50:14 2019]
+rule haplotype_caller:
+    input: /mnt/IMBG-NGS-Analysys/StudentsWork/ExomesData/Lop.recal_pass2.bam
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2.g.vcf.gz
+    jobid: 10
+    wildcards: sample=Lop.recal_pass2
+    priority: 2
+
+Terminating processes on user request, this might take some time.
+[Thu May 30 20:50:20 2019]
+Error in rule haplotype_caller:
+    jobid: 10
+    output: /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2.g.vcf.gz
+    shell:
+        
+        ~/gatk-4.1.2.0/gatk HaplotypeCaller \
+        -I /mnt/IMBG-NGS-Analysys/StudentsWork/ExomesData/Lop.recal_pass2.bam \
+        -R /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/reference/hs37d5.fa \
+        -O /mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2.g.vcf.gz \
+        --native-pair-hmm-threads 1 \
+        -ERC GVCF
+        
+
+Removing output files of failed job haplotype_caller since they might be corrupted:
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/Lop.recal_pass2.g.vcf.gz
+Complete log: /home/kilina_da/project-ib/.snakemake/log/2019-05-30T205013.955111.snakemake.log
