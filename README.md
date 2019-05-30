@@ -16,8 +16,6 @@ Material
 10 different samples WES from patients with idiopathic cases of caridiomyopathy
 
 Methods
-
-samtools - sudo apt install samtools
 bcftools - sudo apt install bcftools
 GATK-4.1.2.0 - https://software.broadinstitute.org/gatk/download/
 annovar - http://download.openbioinformatics.org/annovar_download_form.php
@@ -29,6 +27,25 @@ Final GATK filtration runs with following parameters:
 Files description
 Snakefile - executable file for Snakemake. To run, simply type snakemake in terminal in project directory.
 /rules - directory with pipeline's rules
+01_haplotype_caller.smk - Call variants using HaplotypeCaller in GVCF mode
+02_combine_gvcf.smk - Combine GVCF files to one cohort file
+03_genotype_gvcf.smk - Genotype cogort GVCF file
+04_left_trim.smk - Left-aligns the indels and trims common bases from indels
+05_select_snp.smk - Select variants to SNP 
+06_select_indel.smk - Select variants to indels
+07_filter_snp.smk - Filtering SNP variants
+08_filter_indel.smk - Filtering indels variant
+09_bcftools_norm_snp.smk' - Prepare SNP imput files to annovar using bcftools
+10_bcftools_norm_ind.smk' - Prepare indels imput files to annovar using bcftools
+11_annovar_snp.smk' - Annotate SNP variants
+12_annovar_ind.smk' - Annotate indels variants
+13_snpEff.smk' - Annotate combine gvcf file by snpEff
 /snpEff - result from snpEff
 /QC3 - result from QC3
 
+
+Genotype cogort GVCF file
+Select variants to SNP and INDELS
+Filtering variants to SNP and INDELS
+Annotation by Annovar and SnpEff
+Select clinically relevant variant
