@@ -1,6 +1,6 @@
 configfile: '/home/kilina_da/project-ib/config.yaml'
 
-rule anovar_snp:
+rule anovar_ind:
     input:
         "work_dir + '/kilina_da/output/norm_filter_indel_left_combine_genotype.vcf'" 
     output:
