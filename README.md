@@ -1,6 +1,6 @@
-Pipeline for variant calling by HaplotypeCaller (GATK)
+# Pipeline for variant calling by HaplotypeCaller (GATK)
 
-# Description
+## Description
 Laboratory of Molecular Biology and Genetics of Federal Almazov Medical Research Center regularly performs exom sequencing in patients. As a rule, prior to whole exom sequencing (WES), the analysis of the hereditary nature of the disease is carried out and these patients are sequenced on small panels with targeted enrichment of the genes described in the literature and known as causal in different type of cardiomyopathy. If the small panel does not produce results, then WES can be conduct and the analysis of rare variants using frequency databases allows identifying pathogenic variants in ~ 70% of such patients.
 
 ## Goals and objectives
