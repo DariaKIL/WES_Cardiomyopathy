@@ -1,3 +1,0 @@
-SyntaxError in line 7 of /home/kilina_da/project-ib/rules/5_select_var.smk:
-invalid syntax
-  File "/home/kilina_da/project-ib/Snakefile", line 39, in <module>

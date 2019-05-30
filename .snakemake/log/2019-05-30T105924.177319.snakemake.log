@@ -1,4 +1,0 @@
-Building DAG of jobs...
-WildcardError in line 3 of /home/kilina_da/project-ib/rules/05_combine_gvcf.smk:
-Wildcards in input files cannot be determined from output files:
-'sample'

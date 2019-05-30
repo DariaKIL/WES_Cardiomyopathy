@@ -1,3 +1,0 @@
-SyntaxError in line 9 of /home/kilina_da/project-ib/rules/5_select_snp.smk:
-EOL while scanning string literal
-  File "/home/kilina_da/project-ib/Snakefile", line 40, in <module>

@@ -1,4 +1,0 @@
-CreateRuleException in line 3 of /home/kilina_da/project-ib/rules/6_select_indel.smk:
-The name select_var is already used by another rule
-  File "/home/kilina_da/project-ib/Snakefile", line 41, in <module>
-  File "/home/kilina_da/project-ib/rules/6_select_indel.smk", line 3, in <module>

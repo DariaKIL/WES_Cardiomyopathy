@@ -1,3 +1,0 @@
-SyntaxError in line 6 of /home/kilina_da/project-ib/rules/04_haplotype_caller.smk:
-invalid syntax
-  File "/home/kilina_da/project-ib/Snakefile", line 49, in <module>

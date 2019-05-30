@@ -1,3 +1,0 @@
-WorkflowError in line 35 of /home/kilina_da/project-ib/Snakefile:
-Failed to open /home/daria/snakemake/project-ib/rules/1_bam_index.smk.
-  File "/home/kilina_da/project-ib/Snakefile", line 35, in <module>

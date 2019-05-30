@@ -1,3 +1,0 @@
-FileNotFoundError in line 5 of /home/kilina_da/project-ib/Snakefile:
-[Errno 2] No such file or directory: '/mnt/IBMG-NGS-Analysys/StudentWork'
-  File "/home/kilina_da/project-ib/Snakefile", line 5, in <module>

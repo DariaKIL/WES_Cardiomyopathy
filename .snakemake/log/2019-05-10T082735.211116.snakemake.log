@@ -1,4 +1,0 @@
-WorkflowError in line 1 of /home/kilina_da/project-ib/rules/1_bam_index.smk:
-Config file /home/daria/snakemake/project-ib/config.yaml not found.
-  File "/home/kilina_da/project-ib/Snakefile", line 35, in <module>
-  File "/home/kilina_da/project-ib/rules/1_bam_index.smk", line 1, in <module>

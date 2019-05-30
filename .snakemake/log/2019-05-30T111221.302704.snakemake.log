@@ -1,3 +1,0 @@
-SyntaxError in line 10 of /home/kilina_da/project-ib/rules/05_combine_gvcf.smk:
-invalid syntax
-  File "/home/kilina_da/project-ib/Snakefile", line 50, in <module>
