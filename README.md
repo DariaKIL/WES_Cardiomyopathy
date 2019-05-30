@@ -6,13 +6,13 @@ Laboratory of Molecular Biology and Genetics of Federal Almazov Medical Research
 ## Goals and objectives
 Our goal was to detect previously unknown variants of SNP and indels in patients with different types of idiopathic cardiomyopathies.
 
-Write Pipeline for Variant Calling and Variant Filtration
-Analyze data with HaplotypeCaller
-Annotate with Annovar, SnpEff.
-All stages are included in the Snakemake pipeline, presented in this repository.
+* Write Pipeline for Variant Calling and Variant Filtration
+* Analyze data with HaplotypeCaller
+* Annotate with Annovar, SnpEff.
+* All stages are included in the Snakemake pipeline, presented in this repository.
 
 ## Material
-10 different samples WES from patients with idiopathic cases of caridiomyopathy
+10 different WES samples  from patients with idiopathic cases of caridiomyopathy
 
 ## Methods
 ```
