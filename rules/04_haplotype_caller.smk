@@ -2,7 +2,7 @@ configfile: '/home/kilina_da/project-ib/config.yaml'
 
 rule haplotype_caller:
     input: 
-        work_dir + '/kilina_da/input/{sample}.bam',
+        work_dir + '/ExomesData/{sample}.bam',
     output: 
         work_dir + '/kilina_da/output/{sample}.g.vcf.gz',
     params: 

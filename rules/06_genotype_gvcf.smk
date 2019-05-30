@@ -2,9 +2,9 @@ configfile: '/home/kilina_da/project-ib/config.yaml'
 
 rule genotype_gvcf:
     input: 
-        work_dir + '/kilina_da/output/cohort.g.vcf.gz'
+        work_dir + '/kilina_da/output/combine.g.vcf.gz'
     output: 
-        work_dir + '/kilina_da/output/cohort_genotyped.g.vcf.gz'
+        work_dir + '/kilina_da/output/combine_genotype.g.vcf.gz'
     params: 
         ref
     shell: 

@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in line 22 of /home/kilina_da/project-ib/Snakefile:
+Missing input files for rule all:
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/norm_filter_snp_left_trim_combine_genotype.hg19_multianno.vcf
+/mnt/IMBG-NGS-Analysys/StudentsWork/kilina_da/output/norm_filter_indel_left_trim_combine_genotype.hg19_multianno.vcf

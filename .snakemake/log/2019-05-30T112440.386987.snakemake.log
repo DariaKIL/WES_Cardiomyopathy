@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 3 of /home/kilina_da/project-ib/rules/04_haplotype_caller.smk:
+Missing input files for rule haplotype_caller:
+/mnt/IMBG-NGS-Analysys/StudentsWork/ExomesData/combine_genotype.bam

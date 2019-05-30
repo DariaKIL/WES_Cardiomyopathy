@@ -32,8 +32,8 @@ rule all:
         expand(work_dir + '/kilina_da/output/indel_left_trim_combine_genotype.g.vcf.gz'),
         expand(work_dir + '/kilina_da/output/filter_snp_left_trim_combine_genotype.g.vcf.gz'),
         expand(work_dir + '/kilina_da/output/filter_indel_left_trim_combine_genotype.g.vcf.gz'),
-        expand(work_dir + '/kilina_da/output/norm_filter_indel_left_combine_genotype.vcf'),
-        expand(work_dir + '/kilina_da/output/norm_filter_snp_left_combine_genotype.vcf'),
+        expand(work_dir + '/kilina_da/output/norm_filter_snp_left_trim_combine_genotype.vcf'),
+        expand(work_dir + '/kilina_da/output/norm_filter_indel_left_trim_combine_genotype.vcf'),
         expand(work_dir + '/kilina_da/output/snp_myanno.hg19_multianno.vcf'),
         expand(work_dir + '/kilina_da/output/indel_myanno.hg19_multianno.vcf'),
         expand(work_dir + '/kilina_da/output/combine_genotype_snpEff.vcf'),
@@ -54,11 +54,14 @@ include:'/home/kilina_da/project-ib/rules/08_select_snp.smk'
 include:'/home/kilina_da/project-ib/rules/09_select_indel.smk'
 include:'/home/kilina_da/project-ib/rules/10_filter_snp.smk'
 include:'/home/kilina_da/project-ib/rules/11_filter_indel.smk'
-include:'/home/kilina_da/project-ib/rules/12_bcftools_norm_ind.smk'
-include:'/home/kilina_da/project-ib/rules/13_bcftools_norm_snp.smk'
+include:'/home/kilina_da/project-ib/rules/12_bcftools_norm_snp.smk'
+include:'/home/kilina_da/project-ib/rules/13_bcftools_norm_ind.smk'
 include:'/home/kilina_da/project-ib/rules/14_annovar_snp.smk'
 include:'/home/kilina_da/project-ib/rules/15_annovar_ind.smk'
 include:'/home/kilina_da/project-ib/rules/16_snpEff.smk'    
+
+
+
 
 
 
