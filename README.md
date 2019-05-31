@@ -36,15 +36,17 @@ ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/phase2_referenc
 ``` "AS_QD < 2.0 && AS_FS > 60.0 && AS_MQ < 40.0 && AS_MQRankSum < -12.5 && AS_ReadPosRankSum < -8.0" ``` for SNP's
 ``` "AS_QD < 2.0 && AS_FS > 200.0 && AS_ReadPosRankSum < -20.0 ``` for Indels
 - QC3 - ```https://github.com/slzhao/QC3```
-QC3 was ran inside pipeline
+QC3 was ran inside pipeline with following command 
 ```perl qc3.pl -m v -i ./combine_genotype.g.vcf -o ../QC3```
 
 
 ## Files description
 ----------------------------------------------------------
 
-- Snakefile - executable file for Snakemake. To run, simply type snakemake in terminal in project directory.
-- /rules - directory with pipeline's rules
+### Snakefile - executable file for Snakemake. To run, simply type snakemake in terminal in project directory.
+### /snpEff - result from snpEff
+### /QC3 - result from QC3
+### /rules - directory with pipeline's rules
 - 01_haplotype_caller.smk - Call variants using HaplotypeCaller in GVCF mode
 - 02_combine_gvcf.smk - Combine GVCF files to one cohort file
 - 03_genotype_gvcf.smk - Genotype cogort GVCF file
@@ -58,8 +60,6 @@ QC3 was ran inside pipeline
 - 11_annovar_snp.smk - Annotate SNP variants
 - 12_annovar_ind.smk - Annotate indels variants
 - 13_snpEff.smk - Annotate combine gvcf file by snpEff
-- /snpEff - result from snpEff
-- /QC3 - result from QC3
 
 ## System requirements
 ----------------------------------------------------------
