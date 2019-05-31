@@ -6,10 +6,13 @@
 
 Laboratory of Molecular Biology and Genetics of Federal Almazov Medical Research Center regularly performs exom sequencing in patients. As a rule, prior to whole exom sequencing (WES), the analysis of the hereditary nature of the disease is carried out and these patients are sequenced on small panels with targeted enrichment of the genes described in the literature and known as causal in different type of cardiomyopathy. If the small panel does not produce results, then WES can be conduct and the analysis of rare variants using frequency databases allows identifying pathogenic variants in ~ 70% of such patients.
 
-## Goals and objectives
+## Goal
 ---------------------------------------------------------
 
-Our goal was to detect previously unknown variants of SNP and indels in patients with different types of idiopathic cardiomyopathies.
+Detecting previously unknown variants of SNP and indels in patients with different types of idiopathic cardiomyopathies.
+
+## Objectives
+---------------------------------------------------------
 
 * Write Pipeline for Variant Calling and Variant Filtration
 * Analyze data with HaplotypeCaller
@@ -44,23 +47,25 @@ QC3 was ran inside pipeline with following command
 ----------------------------------------------------------
 
 ##### Snakefile 
-- executable file for Snakemake. To run, simply type snakemake in terminal in project directory.
+- executable file for Snakemake. To run, simply type snakemake in terminal in project directory
+##### Comfig.yaml 
+- - configuration file for Snakemake
 ##### /snpEff 
 - result from snpEff
 ##### /QC3 
 - result from QC3
-##### /rules 
-- directory with pipeline's rules
-- 01_haplotype_caller.smk - Call variants using HaplotypeCaller in GVCF mode
-- 02_combine_gvcf.smk - Combine GVCF files to one cohort file
-- 03_genotype_gvcf.smk - Genotype cogort GVCF file
-- 04_left_trim.smk - Left-aligns the indels and trims common bases from indels
-- 05_select_snp.smk - Select variants to SNP 
-- 06_select_indel.smk - Select variants to indels
+##### /rules - directory with pipeline's rules
+- 00_bam_index.smk - Indexing bam file's  
+- 01_haplotype_caller.smk - Calling variants using HaplotypeCaller in GVCF mode
+- 02_combine_gvcf.smk - Combining GVCF files to one cohort file
+- 03_genotype_gvcf.smk - Genotyping cogort GVCF file
+- 04_left_trim.smk - Left-aligning the indels and triming common bases from indels
+- 05_select_snp.smk - Selecting variants to SNP 
+- 06_select_indel.smk - Selecting variants to indels
 - 07_filter_snp.smk - Filtering SNP variants
 - 08_filter_indel.smk - Filtering indels variant
-- 09_bcftools_norm_snp.smk - Prepare SNP imput files to annovar using bcftools
-- 10_bcftools_norm_ind.smk - Prepare indels imput files to annovar using bcftools
+- 09_bcftools_norm_snp.smk - Preparing SNP imput files to annovar using bcftools
+- 10_bcftools_norm_ind.smk - Preparing indels imput files to annovar using bcftools
 - 11_annovar_snp.smk - Annotate SNP variants
 - 12_annovar_ind.smk - Annotate indels variants
 - 13_snpEff.smk - Annotate combine gvcf file by snpEff
