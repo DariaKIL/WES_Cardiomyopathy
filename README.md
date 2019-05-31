@@ -43,10 +43,14 @@ QC3 was ran inside pipeline with following command
 ## Files description
 ----------------------------------------------------------
 
-###### Snakefile - executable file for Snakemake. To run, simply type snakemake in terminal in project directory.
-###### /snpEff - result from snpEff
-###### /QC3 - result from QC3
-###### /rules - directory with pipeline's rules
+##### Snakefile 
+- executable file for Snakemake. To run, simply type snakemake in terminal in project directory.
+##### /snpEff 
+- result from snpEff
+##### /QC3 
+- result from QC3
+##### /rules 
+- directory with pipeline's rules
 - 01_haplotype_caller.smk - Call variants using HaplotypeCaller in GVCF mode
 - 02_combine_gvcf.smk - Combine GVCF files to one cohort file
 - 03_genotype_gvcf.smk - Genotype cogort GVCF file
