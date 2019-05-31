@@ -1,5 +1,5 @@
 # Pipeline for variant calling by HaplotypeCaller (GATK)
-========================================================
+--------------------------------------------------------
 
 ## Description
 --------------------------------------------------------
@@ -18,8 +18,8 @@ Our goal was to detect previously unknown variants of SNP and indels in patients
 
 ## Material
 ---------------------------------------------------------
-10 different WES samples  from patients with idiopathic cases of caridiomyopathy
-We use reference ```hs37d5```
+* 10 different WES samples  from patients with idiopathic cases of caridiomyopathy
+* Feference version is ```hs37d5```
 ```
 ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/phase2_reference_assembly_sequence/hs37d5.fa.gz
 ```
