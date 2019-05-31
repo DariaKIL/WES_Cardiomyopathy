@@ -18,6 +18,7 @@ print('BAM files:' + str(samples))
 
 rule all:
     input:
+        expand(work_dir + '/ExomesData/{sample}.bam.bai', sample=samples),
         expand(work_dir + '/kilina_da/output/{sample}.g.vcf.gz', sample=samples),
         work_dir + '/kilina_da/output/combine.g.vcf.gz',
         work_dir + '/kilina_da/output/combine_genotype.g.vcf.gz',
@@ -37,6 +38,7 @@ rule all:
 
 ##### Modules #####
 
+include:'/home/kilina_da/project-ib/rules/00_bam_index.smk'
 include:'/home/kilina_da/project-ib/rules/01_haplotype_caller.smk'
 include:'/home/kilina_da/project-ib/rules/02_combine_gvcf.smk'
 include:'/home/kilina_da/project-ib/rules/03_genotype_gvcf.smk'
@@ -49,7 +51,7 @@ include:'/home/kilina_da/project-ib/rules/09_bcftools_norm_snp.smk'
 include:'/home/kilina_da/project-ib/rules/10_bcftools_norm_ind.smk'
 include:'/home/kilina_da/project-ib/rules/11_annovar_snp.smk'
 include:'/home/kilina_da/project-ib/rules/12_annovar_ind.smk'
-include:'/home/kilina_da/project-ib/rules/13_snpEff.smk'    
+include:'/home/kilina_da/project-ib/rules/13_snpEff.smk'
 
 
 

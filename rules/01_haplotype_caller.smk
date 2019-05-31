@@ -2,19 +2,18 @@ configfile: '/home/kilina_da/project-ib/config.yaml'
 
 rule haplotype_caller:
     input: 
-        work_dir + '/ExomesData/{sample}.bam',
+        files = work_dir + '/ExomesData/{sample}.bam',
+        bai = work_dir + '/ExomesData/{sample}.bam.bai',
     output: 
         work_dir + '/kilina_da/output/{sample}.g.vcf.gz',
     params: 
         ref
-    priority: 
-        2
     threads: 
         14
     shell: 
         r"""
         ~/gatk-4.1.2.0/gatk HaplotypeCaller \
-        -I {input} \
+        -I {input.files} \
         -R {params} \
         -O {output} \
         --native-pair-hmm-threads {threads} \
