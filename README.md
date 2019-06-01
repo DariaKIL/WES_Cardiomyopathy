@@ -19,7 +19,7 @@ Detecting previously unknown variants of SNP and indels in patients with differe
 * Annotate with Annovar, SnpEff.
 * All stages are included in the Snakemake pipeline, presented in this repository.
 
-## Material
+## Materials
 ---------------------------------------------------------
 * 10 different WES samples  from patients with idiopathic cases of caridiomyopathy
 * Feference version is ```hs37d5```
@@ -49,7 +49,7 @@ QC3 was ran inside pipeline with following command
 ##### Snakefile 
 - executable file for Snakemake. To run, simply type snakemake in terminal in project directory
 ##### Comfig.yaml 
-- - configuration file for Snakemake
+- configuration file for Snakemake
 ##### /snpEff 
 - result from snpEff
 ##### /QC3 
