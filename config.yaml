@@ -1,7 +1,5 @@
 ref: '/mnt/IMBG-NGS-Analysys/StudentWork/reference/hs37d5.fa'
 
-bam_file: '/mnt/IMBG-NGS-Analysys/StudentWork/input/'
-
 gatk: '/home/daria/gatk-4.1.0.0/gatk'
 
 dbsnp: '/mnt/IMBG-NGS-Analysys/StudentWork/reference/00-All.vcf'
