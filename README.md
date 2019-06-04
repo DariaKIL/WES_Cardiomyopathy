@@ -85,6 +85,7 @@ The first Variant Calling steps were provided in Snakemake pipeline. This is the
 
 To run, we need simply type snakemake in terminal in project directory.
 The main output from this pipeline is annotated vcf file from annovar. 
+
 QC3 was ran inside pipeline with following command 
 ```perl qc3.pl -m v -i ./combine_genotype.g.vcf -o path/to/QC3```
 
@@ -113,7 +114,7 @@ write.csv(snp_data1, "SNP_result.csv")
 ```
 There is just SNPs result, because the similar manipulation for INDELs (but not the same, because not all tool prediction work with indels) did't lead the result - all damaging INDELs had allready known.
 
-### Some information about gene with one of SNPs - SLC2A8 (Solute Carrier Family 2 Member 8)
+#### Some information about gene with one of SNPs - SLC2A8 (Solute Carrier Family 2 Member 8)
 This gene belongs to the solute carrier 2A family, which includes intracellular glucose transporters and expression of glucose transporters. The loss of metabolic flexibility associated with increased reliance on glucose utilization contribute to the development of cardiac dysfunction. The changes in glucose metabolism in hypertrophied hearts include altered glucose transport and increased glycolysis  *Shao, D., & Tian, R. (2015). Glucose Transporters in Cardiac Metabolism and Hypertrophy. Comprehensive Physiology, 331–351. doi:10.1002/cphy.c150016*
 
 ## Results
