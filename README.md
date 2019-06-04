@@ -79,10 +79,10 @@ Detecting previously unknown variants of SNP and indels in patients with differe
 
 ## How it works
 ----------------------------------------------------------
-Firstly I want to say, that I can't provide baseline data and vcf files with annotated results, because this is confidential information about patients. 
+We can't provide baseline data and vcf files with annotated results, because this is confidential information about patients. 
 
 The most variant calling steps were provided in Snakemake pipeline. To run, we need simply type snakemake in terminal in project directory.
-The main output from this pipeline is annotated vcf file from annovar (with confidential information). 
+The main output from this pipeline is annotated vcf file from annovar. 
 
 * Then we need to extract some information from vcf file with ```bcftools query``` and make simple txt table.
 
