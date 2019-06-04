@@ -31,12 +31,12 @@ Detecting previously unknown variants of SNP and indels in patients with differe
 
 - Samtools - ```sudo apt install samtools```
 - Bcftools - ```sudo apt install bcftools```
+- Snakemake - ```pip3 install snakemake```
 - [GATK-4.1.2.0](https://software.broadinstitute.org/gatk/download/)
 - [Annovar](http://download.openbioinformatics.org/annovar_download_form.php)
 - [SNPEff](snpeff.sourceforge.net/download.html)
 - [QC3](https://github.com/slzhao/QC3) 
 - [R-studio](https://www.r-studio.com/ru/)
-- Snakemake - ```pip3 install snakemake```
 - Final GATK filtration run with following parameters:
 ``` "AS_QD < 2.0 && AS_FS > 60.0 && AS_MQ < 40.0 && AS_MQRankSum < -12.5 && AS_ReadPosRankSum < -8.0" ``` for SNP's
 ``` "AS_QD < 2.0 && AS_FS > 200.0 && AS_ReadPosRankSum < -20.0 ``` for Indels
