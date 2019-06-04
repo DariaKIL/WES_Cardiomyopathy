@@ -80,7 +80,7 @@ Detecting previously unknown variants of SNP and indels in patients with differe
 
 ## Commands description
 ----------------------------------------------------------
-We can't provide baseline data and vcf files with annotated results, because this is confidential information about patients. 
+We can't provide our imput data and vcf files with annotated results, because this is confidential information about patients. 
 
 The first Variant Calling steps were provided in Snakemake pipeline. This is the workflow recommended in our Best Practices for performing variant discovery analysis on cohorts of samples. We call variants individually on each sample using the HaplotypeCaller in -ERC GVCF mode. In a second step, we then perform a joint genotyping analysis of the gVCFs produced for all samples in a cohort. Then we run GenotypeGVCFs on all of them together to create the raw SNP and indel VCFs. Then we go to filtering variants to SNP and INDELS and annotation by Annovar and SnpEff.
 
