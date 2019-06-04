@@ -78,19 +78,21 @@ Detecting previously unknown variants of SNP and indels in patients with differe
 - java 8 (openjdk version "1.8.0_191")
 - R-3.6.0
 
-## Main commands
+## Commands description
 ----------------------------------------------------------
 We can't provide baseline data and vcf files with annotated results, because this is confidential information about patients. 
 
-The most variant calling steps were provided in Snakemake pipeline. To run, we need simply type snakemake in terminal in project directory.
+The first Variant Calling steps were provided in Snakemake pipeline. This is the workflow recommended in our Best Practices for performing variant discovery analysis on cohorts of samples. We call variants individually on each sample using the HaplotypeCaller in -ERC GVCF mode. In a second step, we then perform a joint genotyping analysis of the gVCFs produced for all samples in a cohort. Then we run GenotypeGVCFs on all of them together to create the raw SNP and indel VCFs. Then we go to filtering variants to SNP and INDELS and annotation by Annovar and SnpEff.
+
+To run, we need simply type snakemake in terminal in project directory.
 The main output from this pipeline is annotated vcf file from annovar. 
 
-* Then we need to extract some information from vcf file with ```bcftools query``` and make simple txt table.
+Then we need to extract some information from vcf file with ```bcftools query``` and make simple txt table.
 
 ```
 bcftools query -f '%CHROM %POS %ID %REF %ALT %QUAL %FILTER %FORMAT %AF %ExAC_ALL %CADD_phred %Func.refGene %Gene.refGene %ExonicFunc.refGene %AAChange.refGene %ExAC_ALL %SIFT_pred %Polyphen2_HDIV_pred %Polyphen2_HVAR_pred %LRT_pred %MutationTaster_pred %MutationAssessor_pred %FATHMM_pred %PROVEAN_pred %CADD_phred %MetaSVM_pred\n' snp_myanno.hg19_multianno.vcf > snp_myanno_bases.txt
 ```
-* The simple filtration with small R command
+The simple filtration with small R command
 ```
 snp_data <-  read.csv('snp_myanno_bases.txt', sep=' ', na.strings = '.')
 snp_data1 <- subset(snp_data, AF > ExAC_ALL &
@@ -110,6 +112,9 @@ write.csv(snp_data1, "SNP_result.csv")
 ```
 There is just SNPs result, because the similar manipulation for INDELs (but not the same, because not all tool prediction work with indels) did't lead the result - all damaging INDELs had allready known.
 
+### Some information about gene with one of SNPs - SLC2A8 (Solute Carrier Family 2 Member 8)
+This gene belongs to the solute carrier 2A family, which includes intracellular glucose transporters and expression of glucose transporters. The loss of metabolic flexibility associated with increased reliance on glucose utilization contribute to the development of cardiac dysfunction. The changes in glucose metabolism in hypertrophied hearts include altered glucose transport and increased glycolysis  *Shao, D., & Tian, R. (2015). Glucose Transporters in Cardiac Metabolism and Hypertrophy. Comprehensive Physiology, 331–351. doi:10.1002/cphy.c150016*
+
 ## Results
 ----------------------------------------------------------
 1. Implemented Variant Calling (GATK) pipeline on Snakemake
@@ -117,6 +122,3 @@ There is just SNPs result, because the similar manipulation for INDELs (but not 
 3. As a result of comparing the allele frequencies with the frequencies of ExAC and taking into account the tool prediction (SIFT, Polyphen2, LRT, MutationTaster, MutationAssessor, FATHMM, PROVEAN, CADD, MetaSVM) 6 previously unknown SNPs in various genes were detected. The most interesting is the mutation in the SLC25A5 gene, according to the literature data.
 4. New INDELs variants haven't been identified
 
-#### Some information about SLC2A8 (Solute Carrier Family 2 Member 8)
-This gene belongs to the solute carrier 2A family, which includes intracellular glucose transporters and expression of glucose transporters. The loss of metabolic flexibility associated with increased reliance on glucose utilization contribute to the development of cardiac dysfunction. The changes in glucose metabolism in hypertrophied hearts include altered glucose transport and increased glycolysis
-*Shao, D., & Tian, R. (2015). Glucose Transporters in Cardiac Metabolism and Hypertrophy. Comprehensive Physiology, 331–351. doi:10.1002/cphy.c150016*
