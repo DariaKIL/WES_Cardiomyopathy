@@ -25,22 +25,21 @@ Detecting previously unknown variants of SNP and indels in patients with differe
 * 10 different WES samples  from patients with idiopathic cases of caridiomyopathy
 * Feference version is [hs37d5](ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/phase2_reference_assembly_sequence/hs37d5.fa.gz)
 * [Bed file](https://drive.google.com/file/d/1mu6VE1f7yfY2cUCZ1TwQzXpaF_8lX7qk/view?usp=sharing)
-## Methods
+
+## Programms
 ----------------------------------------------------------
 
-- samtools - ```sudo apt install samtools```
-- bcftools - ```sudo apt install bcftools```
+- Samtools - ```sudo apt install samtools```
+- Bcftools - ```sudo apt install bcftools```
 - [GATK-4.1.2.0](https://software.broadinstitute.org/gatk/download/)
-- [annovar](http://download.openbioinformatics.org/annovar_download_form.php)
+- [Annovar](http://download.openbioinformatics.org/annovar_download_form.php)
 - [SNPEff](snpeff.sourceforge.net/download.html)
-- Final GATK filtration runs with following parameters:
-``` "AS_QD < 2.0 && AS_FS > 60.0 && AS_MQ < 40.0 && AS_MQRankSum < -12.5 && AS_ReadPosRankSum < -8.0" ``` for SNP's
-``` "AS_QD < 2.0 && AS_FS > 200.0 && AS_ReadPosRankSum < -20.0 ``` for Indels
-- [QC3](https://github.com/slzhao/QC3) was ran inside pipeline with following command 
-```perl qc3.pl -m v -i ./combine_genotype.g.vcf -o ../QC3```
+- [QC3](https://github.com/slzhao/QC3) 
 - [R-studio](https://www.r-studio.com/ru/)
 - Snakemake - ```pip3 install snakemake```
-
+- Final GATK filtration run with following parameters:
+``` "AS_QD < 2.0 && AS_FS > 60.0 && AS_MQ < 40.0 && AS_MQRankSum < -12.5 && AS_ReadPosRankSum < -8.0" ``` for SNP's
+``` "AS_QD < 2.0 && AS_FS > 200.0 && AS_ReadPosRankSum < -20.0 ``` for Indels
 
 ## Files description
 ----------------------------------------------------------
@@ -86,6 +85,8 @@ The first Variant Calling steps were provided in Snakemake pipeline. This is the
 
 To run, we need simply type snakemake in terminal in project directory.
 The main output from this pipeline is annotated vcf file from annovar. 
+QC3 was ran inside pipeline with following command 
+```perl qc3.pl -m v -i ./combine_genotype.g.vcf -o path/to/QC3```
 
 Then we need to extract some information from vcf file with ```bcftools query``` and make simple txt table.
 
