@@ -39,6 +39,7 @@ Detecting previously unknown variants of SNP and indels in patients with differe
 - [QC3](https://github.com/slzhao/QC3) was ran inside pipeline with following command 
 ```perl qc3.pl -m v -i ./combine_genotype.g.vcf -o ../QC3```
 - [R-studio](https://www.r-studio.com/ru/)
+- Snakemake - ```pip3 install snakemake```
 
 
 ## Files description
@@ -77,7 +78,7 @@ Detecting previously unknown variants of SNP and indels in patients with differe
 - java 8 (openjdk version "1.8.0_191")
 - R-3.6.0
 
-## How it works
+## Main commands
 ----------------------------------------------------------
 We can't provide baseline data and vcf files with annotated results, because this is confidential information about patients. 
 
