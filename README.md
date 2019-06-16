@@ -119,7 +119,7 @@ This gene belongs to the solute carrier 2A family, which includes intracellular 
 
 ## Results
 ----------------------------------------------------------
-1. Implemented Variant Calling (GATK) pipeline on Snakemake
+1. Variant Calling (GATK) pipeline on Snakemake was implemented 
 2. The main statistics from snpEff - 48.07% missens and 51.38% silence, the total number of SNPs - 203.827, INS - 14.352, DEL -19.891
 3. As a result of comparing the allele frequencies with the frequencies of ExAC and taking into account the tool prediction (SIFT, Polyphen2, LRT, MutationTaster, MutationAssessor, FATHMM, PROVEAN, CADD, MetaSVM) 6 previously unknown SNPs in various genes were detected. The most interesting is the mutation in the SLC25A5 gene, according to the literature data.
 4. New INDELs variants haven't been identified
