@@ -1,10 +1,10 @@
-configfile: '/home/kilina_da/project-ib/config.yaml'
+configfile: work_dir + '/config.yaml'
 
 rule select_snp:
     input: 
-        work_dir + '/kilina_da/output/left_trim_combine_genotype.g.vcf.gz'
+        work_dir + '/output/left_trim_combine_genotype.g.vcf.gz'
     output: 
-        work_dir + '/kilina_da/output/snp_left_trim_combine_genotype.g.vcf.gz'
+        work_dir + '/output/snp_left_trim_combine_genotype.g.vcf.gz'
     params: 
         ref
     priority: 

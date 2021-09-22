@@ -2,6 +2,8 @@
 Pipeline for variant calling by HaplotypeCaller (GATK)
 --------------------------------------------------------
 
+### Was tested only on Linux
+
 ## Description
 --------------------------------------------------------
 
@@ -25,6 +27,14 @@ Detecting previously unknown variants of SNP and indels in patients with differe
 * 10 different WES samples  from patients with idiopathic cases of caridiomyopathy
 * Feference version is [hs37d5](ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/phase2_reference_assembly_sequence/hs37d5.fa.gz)
 * [Bed file](https://drive.google.com/file/d/1mu6VE1f7yfY2cUCZ1TwQzXpaF_8lX7qk/view?usp=sharing)
+
+
+## How to use
+
+- Create `ExomesData` folder 
+- Put your `bam` files there
+
+---------------------------------------------------------
 
 ## Programms
 ----------------------------------------------------------
@@ -116,6 +126,8 @@ There is just SNPs result, because the similar manipulation for INDELs (but not 
 
 #### Some information about gene with one of SNPs - SLC2A8 (Solute Carrier Family 2 Member 8)
 This gene belongs to the solute carrier 2A family, which includes intracellular glucose transporters and expression of glucose transporters. The loss of metabolic flexibility associated with increased reliance on glucose utilization contribute to the development of cardiac dysfunction. The changes in glucose metabolism in hypertrophied hearts include altered glucose transport and increased glycolysis  *Shao, D., & Tian, R. (2015). Glucose Transporters in Cardiac Metabolism and Hypertrophy. Comprehensive Physiology, 331–351. doi:10.1002/cphy.c150016*
+
+----------------------------------------------------------
 
 ## Results
 ----------------------------------------------------------

@@ -1,4 +1,4 @@
-configfile: '/home/kilina_da/project-ib/config.yaml'
+configfile: work_dir + '/config.yaml'
 
 rule bam_index:
     input: work_dir + '/ExomesData/{sample}.bam',

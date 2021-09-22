@@ -1,11 +1,11 @@
-configfile: '/home/kilina_da/project-ib/config.yaml'
+configfile: work_dir + '/config.yaml'
 
 rule haplotype_caller:
     input: 
         files = work_dir + '/ExomesData/{sample}.bam',
         bai = work_dir + '/ExomesData/{sample}.bam.bai',
     output: 
-        work_dir + '/kilina_da/output/{sample}.g.vcf.gz',
+        work_dir + '/output/{sample}.g.vcf.gz',
     params: 
         ref
     threads: 

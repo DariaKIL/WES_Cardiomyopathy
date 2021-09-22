@@ -1,7 +1,7 @@
-ref: '/mnt/IMBG-NGS-Analysys/StudentWork/reference/hs37d5.fa'
+ref: 'reference/hs37d5.fa'
 
-gatk: '/home/daria/gatk-4.1.0.0/gatk'
+#gatk: '/home/daria/gatk-4.1.0.0/gatk' по-моему это не имеет смысла
 
-dbsnp: '/mnt/IMBG-NGS-Analysys/StudentWork/reference/00-All.vcf'
+dbsnp: 'reference/00-All.vcf'
 
-bed_file: '/mnt/IMBG-NGS-Analysys/StudentWork/reference/Agilent_ExomeV6_S07604514_Padded.picard.interval_list'
+bed_file: 'reference/Agilent_ExomeV6_S07604514_Padded.picard.interval_list'

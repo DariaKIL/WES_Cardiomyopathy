@@ -1,10 +1,10 @@
-configfile: '/home/kilina_da/project-ib/config.yaml'
+configfile: work_dir + '/config.yaml'
 
 rule combine_gvcf:
     input: 
-        expand(work_dir + '/kilina_da/output/{sample}.g.vcf.gz', sample=samples)
+        expand(work_dir + '/output/{sample}.g.vcf.gz', sample=samples)
     output: 
-        work_dir + '/kilina_da/output/combine.g.vcf.gz'
+        work_dir + '/output/combine.g.vcf.gz'
     params: 
         ref,
         files = lambda wildcards, input: "--variant ".join(input)

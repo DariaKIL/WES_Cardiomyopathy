@@ -1,10 +1,10 @@
-configfile: '/home/kilina_da/project-ib/config.yaml'
+configfile: work_dir + '/config.yaml'
 
 rule indel_filter:
     input: 
-        work_dir + '/kilina_da/output/indel_left_trim_combine_genotype.g.vcf.gz'
+        work_dir + '/output/indel_left_trim_combine_genotype.g.vcf.gz'
     output: 
-        work_dir + '/kilina_da/output/filter_indel_left_trim_combine_genotype.g.vcf.gz'
+        work_dir + '/output/filter_indel_left_trim_combine_genotype.g.vcf.gz'
     params: 
         ref
     threads:
