@@ -11,7 +11,7 @@ rule select_indel:
         14
     shell: 
         r"""
-        ~/gatk-4.1.2.0/gatk SelectVariants \
+        gatk SelectVariants \
         -R {params} \
         -V {input} \
         -O {output} \

@@ -11,7 +11,7 @@ rule indel_filter:
         14
     shell:
         r"""
-        ~/gatk-4.1.2.0/gatk VariantFiltration \
+        gatk VariantFiltration \
         -R {params} \
         -V {input} \
         -O {output} \

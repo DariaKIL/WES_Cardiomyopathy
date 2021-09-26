@@ -26,6 +26,8 @@ print('BAM files:' + str(samples))
 
 rule all:
     input:
+        ref + '.fai',
+        reference_path + reference_name + '.dict',
         expand(work_dir + '/ExomesData/{sample}.bam.bai', sample=samples),
         expand(work_dir + '/output/{sample}.g.vcf.gz', sample=samples),
         work_dir + '/output/combine.g.vcf.gz',
@@ -45,7 +47,9 @@ rule all:
 
 
 ##### Modules #####
+include: work_dir + '/rules/00_fa_index.smk'
 include: work_dir + '/rules/00_bam_index.smk'
+include: work_dir + '/rules/00_picard_dict.smk'
 include: work_dir + '/rules/01_haplotype_caller.smk'
 include: work_dir + '/rules/02_combine_gvcf.smk'
 include: work_dir + '/rules/03_genotype_gvcf.smk'

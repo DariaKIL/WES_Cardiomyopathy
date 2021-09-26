@@ -9,7 +9,7 @@ rule genotype_gvcf:
         ref
     shell: 
         r"""
-        ~/gatk-4.1.2.0/gatk --java-options "-Xmx4g" GenotypeGVCFs \
+        gatk --java-options "-Xmx4g" GenotypeGVCFs \
         -R {ref} \
         -V {input} \
         -O {output} \

@@ -12,7 +12,7 @@ rule left_trim:
         14
     shell: 
         r"""
-        ~/gatk-4.1.2.0/gatk LeftAlignAndTrimVariants \
+        gatk LeftAlignAndTrimVariants \
         -R {params.ref} \
         -V {input} \
         -O {output} \

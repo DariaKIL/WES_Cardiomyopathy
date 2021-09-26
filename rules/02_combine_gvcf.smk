@@ -8,4 +8,4 @@ rule combine_gvcf:
     params: 
         ref,
         files = lambda wildcards, input: "--variant ".join(input)
-    shell: '~/gatk-4.1.2.0/gatk CombineGVCFs -R {params.ref} --variant {params.files} -O {output}'
+    shell: 'gatk CombineGVCFs -R {params.ref} --variant {params.files} -O {output}'
