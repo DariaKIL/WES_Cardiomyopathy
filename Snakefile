@@ -63,4 +63,3 @@ include: work_dir + '/rules/10_bcftools_norm_ind.smk'
 include: work_dir + '/rules/11_annovar_snp.smk'
 include: work_dir + '/rules/12_annovar_ind.smk'
 include: work_dir + '/rules/13_snpEff.smk'
-
