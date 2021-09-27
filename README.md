@@ -42,6 +42,7 @@ Detecting previously unknown variants of SNP and indels in patients with differe
 - Samtools - ```sudo apt install samtools```
 - Bcftools - ```sudo apt install bcftools```
 - Snakemake - ```pip3 install snakemake```
+- Picard - ```sudo apt install picard-tools```
 - [GATK-4.1.2.0](https://software.broadinstitute.org/gatk/download/)
 - [Annovar](http://download.openbioinformatics.org/annovar_download_form.php)
 - [SNPEff](snpeff.sourceforge.net/download.html)

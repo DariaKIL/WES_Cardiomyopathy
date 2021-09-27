@@ -1,0 +1,7 @@
+.idea/
+.snakemake/
+ExomesData/
+.snakemake/log/
+output/
+reference/
+*.log

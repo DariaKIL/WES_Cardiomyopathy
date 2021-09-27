@@ -14,7 +14,7 @@ rule haplotype_caller:
         14
     shell: 
         r"""
-        gatk HaplotypeCaller \
+        gatk --java-options "-Xms3032m -Xmx4056m" HaplotypeCaller \
         -I {input.files} \
         -R {params} \
         -O {output} \
