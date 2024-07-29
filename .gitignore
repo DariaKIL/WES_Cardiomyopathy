@@ -5,3 +5,7 @@ ExomesData/
 output/
 reference/
 *.log
+
+input/SoCHR22_hg19.bam
+input/
+reference/hs37d5.fa
