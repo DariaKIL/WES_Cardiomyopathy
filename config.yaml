@@ -1,7 +1,5 @@
 ref: 'reference/hs37d5.fa'
 
-#gatk: '/home/daria/gatk-4.1.0.0/gatk' по-моему это не имеет смысла
-
 dbsnp: 'reference/00-All.vcf'
 
 bed_file: 'reference/Agilent_ExomeV6_S07604514_Padded.picard.interval_list'
